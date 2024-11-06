@@ -1,0 +1,29 @@
+nav{
+    ul{
+        @include flex(row, center, center, 1rem);
+
+        li{
+            @include flex(row, center, center, 0);
+            font-size: 1.65rem;
+            cursor: pointer;
+            transition: 0.3s;
+            color: $TextColor2;
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    nav{
+    ul{
+        li{
+            font-size: 3rem;
+            &.none{
+                display: none;
+            }
+        }
+    }
+}
+}

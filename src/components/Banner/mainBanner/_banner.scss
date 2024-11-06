@@ -1,0 +1,16 @@
+.box-banner {
+    position: relative;
+    cursor: grab;
+    .swiper-pagination-bullet {
+        background: $mainColor;
+        transition: 0.4s;
+        width: .4rem;
+        height: .4rem;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 1.5rem;
+        border-radius: .6rem;
+    }
+}
+

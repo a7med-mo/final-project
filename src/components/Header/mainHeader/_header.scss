@@ -1,0 +1,28 @@
+header {
+    @include flex(row, space-between, center, "");
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-block: 1.5rem;
+    width: 100%;
+    z-index: 2;
+}
+
+.fixed {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 0 .3rem rgba(113, 113, 113, 0.2);
+    animation: fixed 0.5s;
+}
+
+@keyframes fixed {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

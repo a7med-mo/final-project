@@ -1,0 +1,196 @@
+.box-posts {
+    width: 100%;
+    height: 60vh;
+    @include flex(row, space-between, center, 0.5rem);
+    margin-block: .5rem;
+
+    .section-post-left {
+        width: calc((100% - 0.5rem) / 2);
+        height: 100%;
+
+        .post-left {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            .post-image {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    transition: 0.5s;
+                }
+            }
+
+            .post-content {
+                position: absolute;
+                top: 25%;
+                left: 2rem;
+                transform: translateY(-50%);
+
+                h3 {
+                    color: $TextColor1;
+                    text-transform: capitalize;
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+
+                h4 {
+                    color: $TextColor3;
+                    text-transform: capitalize;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    margin-top: .5rem;
+                }
+            }
+
+            &:hover {
+                .post-image {
+                    img {
+                        width: 105%;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-post-right {
+        width: calc((100% - 0.5rem) / 2);
+        height: 100%;
+        @include flex(column, center, center, 0.5rem);
+
+        .section-post-right-top {
+            width: 100%;
+            height: calc((100% - 0.5rem) / 2);
+            @include flex(row, center, center, 0.5rem);
+
+            .post-right-top {
+                width: calc((100% - 0.5rem) / 2);
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                .post-image {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transition: 0.5s;
+                    }
+                }
+
+                .post-content {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+
+                    h3 {
+                        color: $TextColor1;
+                        text-transform: capitalize;
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+
+                    h4 {
+                        color: $TextColor3;
+                        text-transform: capitalize;
+                        font-size: .8rem;
+                        font-weight: 600;
+                        letter-spacing: .32rem;
+                        margin-bottom: .5rem;
+                    }
+                }
+
+                &:hover {
+                    .post-image {
+                        img {
+                            width: 105%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-post-right-bottom {
+            width: 100%;
+            height: calc((100% - 0.5rem) / 2);
+
+            .post-right-bottom {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                .post-image {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transition: 0.5s;
+                    }
+                }
+
+                .post-content {
+                    position: absolute;
+                    top: 25%;
+                    left: 2rem;
+                    transform: translateY(-50%);
+
+                    h3 {
+                        color: $TextColor1;
+                        text-transform: capitalize;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+
+                    h4 {
+                        color: $TextColor3;
+                        text-transform: capitalize;
+                        font-size: 1.45rem;
+                        font-weight: 700;
+                        margin-top: .5rem;
+                    }
+                }
+
+                &:hover {
+                    .post-image {
+                        img {
+                            width: 105%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .box-posts {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 1023px) {
+    .box-posts {
+        height: fit-content;
+        @include flex(column, center, center, 0.5rem);
+
+        .section-post-left {
+            width: 100%;
+            height: 40vh;
+        }
+
+        .section-post-right {
+            width: 100%;
+            height: 40vh;
+        }
+    }
+}
