@@ -2,12 +2,15 @@
 @import './reset.scss';
 @import './function.scss';
 @import './mediaQuery.scss';
+@import '../components/HeaderSection/headerSection';
 @import '../components/Header/mainHeader/header';
 @import '../components/Header/navBar/navBar';
 @import '../components/Header/logo/logo';
 @import '../components/Banner/mainBanner/banner';
 @import '../components/Banner/SlideBanner/slideBanner';
 @import '../components/Posts/posts';
+@import '../components/TrendyItem/trendyItem';
+@import '../components/Card/card';
 // @import './footer.scss';
 // @import './home.scss';
 // @import './cart.scss';

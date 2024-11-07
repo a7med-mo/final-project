@@ -1,0 +1,151 @@
+.box-card {
+    @include flex(column, center, center, 1rem);
+    width: calc((100% / 4) - 1rem);
+    margin-bottom: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+
+
+    .hover-btn-card {
+        @include flex(column, center, center, 0.5rem);
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+
+        button {
+            @include flex(row, center, center, 0);
+            padding: 0.3rem .3rem;
+            background: #fff;
+            border: none;
+            box-shadow: .1rem .1rem .01rem rgba(30, 30, 30, 0.115);
+            cursor: pointer;
+            font-size: .9rem;
+            color: $TextColor1;
+            transition: 0.5s;
+
+            &:hover {
+                color: #fff;
+                background: #000;
+            }
+        }
+    }
+
+    .box-image-card {
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: 0.5s;
+        }
+
+        .image-card {
+            opacity: 1;
+            visibility: visible;
+            transition: .6s;
+        }
+
+        .hover-image-card {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            scale: 1.1;
+            transition: .6s;
+        }
+    }
+
+    .box-content-card {
+        width: 100%;
+        @include flex(column, flex-start, flex-start, 0.5rem);
+
+        h3 {
+            color: $TextColor1;
+            text-transform: capitalize;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: 0.5s;
+        }
+
+        h4 {
+            color: $TextColor2;
+            text-transform: capitalize;
+            font-size: .9rem;
+            font-weight: 500;
+        }
+    }
+
+    .box-color {
+        width: 100%;
+        @include flex(row, flex-start, center, 0.5rem);
+
+        ul {
+            @include flex(row, flex-start, center, 0.5rem);
+
+            li {
+                @include flex(row, center, center, 0.5rem);
+                padding: .1rem;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: 0.3s;
+                border: transparent solid 0.01rem;
+
+
+                span {
+                    background: #6c7152;
+                    width: .85rem;
+                    height: .85rem;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    border: #000000d7 solid 0.01rem;
+                }
+            }
+
+        }
+    }
+
+
+
+    &:hover {
+        .hover-btn-card {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hover-image-card {
+            opacity: 1;
+            visibility: visible;
+
+            animation: img-card 2s;
+        }
+
+        @keyframes img-card {
+            0% {
+                scale: 1;
+            }
+
+            100% {
+                scale: 1.1;
+            }
+        }
+
+        .image-card {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
