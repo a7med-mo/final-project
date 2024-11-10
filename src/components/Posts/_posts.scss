@@ -178,7 +178,7 @@
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .box-posts {
         height: fit-content;
         @include flex(column, center, center, 0.5rem);

@@ -1,5 +1,7 @@
+
 import { GrView } from "react-icons/gr";
 import { IoMdHeartEmpty } from "react-icons/io";
+
 
 
 
@@ -9,7 +11,7 @@ export default function Card() {
         <>
             <div className="box-card">
                 
-                <div className="hover-btn-card">
+                <div className="btn-card">
                     <button ><IoMdHeartEmpty /></button>
                     <button><GrView /></button>
                 </div>

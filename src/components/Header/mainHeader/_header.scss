@@ -3,26 +3,25 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    padding-block: 1.5rem;
+    padding-block: 1.2rem;
     width: 100%;
-    z-index: 2;
-}
+    z-index: 4;    
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
-.fixed {
-    background: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    box-shadow: 0 0 .3rem rgba(113, 113, 113, 0.2);
-    animation: fixed 0.5s;
-}
-
-@keyframes fixed {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         transform: translateY(0);
+        background-color: #fff;
+        box-shadow: 0 .1rem .2rem #5454541a;
+
+        &.hidden {
+            transform: translateY(-100%); 
+        }
+
     }
+    
 }
+

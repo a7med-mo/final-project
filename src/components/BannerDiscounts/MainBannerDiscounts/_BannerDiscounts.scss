@@ -1,0 +1,76 @@
+.banner-discounts {
+    width: 100%;
+    position: relative;
+    margin-bottom: 7rem;
+
+    .background {
+        width: 100%;
+        // height: 75vh;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .section-banner {
+        width: 85%;
+        height: 60vh;
+        background: #fff;
+        box-shadow: 0 0 .5rem rgba(131, 131, 131, 0.578);
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .swiper-pagination-bullet {
+        background: #000;
+        transition: 0.4s;
+        width: .5rem;
+        height: .5rem;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $mainColor;
+        width: 1.2rem;
+        border-radius: .5rem;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .banner-discounts {
+
+        .background {
+            height: 45vh;
+        }
+
+        .section-banner {
+            width: 95%;
+            height: 40vh;
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-discounts {
+
+        .background {
+            height: 95vh;
+            margin-bottom: 15rem;
+
+        }
+
+        .section-banner {
+            width: 95%;
+            height: fit-content;
+            top: 60%;
+        }
+
+    }
+}
