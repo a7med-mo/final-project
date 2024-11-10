@@ -17,8 +17,8 @@ export default function Card() {
                 </div>
                 
                 <div className="box-image-card">
-                    <img src="../../../public/assets/images/imageCard1.jpg" alt="item" className="image-card" />
-                    <img src="../../../public/assets/images/hImageCard1.jpg" alt="item" className="hover-image-card"/>
+                    <img src="https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_4_1_360x.jpg?v=1609734007" alt="item" className="image-card" />
+                    <img src="https://elessi2.myshopify.com/cdn/shop/products/0519492505_1_1_1_360x.jpg?v=1609734011" alt="item" className="hover-image-card"/>
                 </div>
 
                 <div className="box-content-card">

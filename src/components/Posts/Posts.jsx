@@ -7,7 +7,7 @@ export default function Posts() {
                 <div className="section-post-left">
                     <div className="post-left">
                         <div className="post-image">
-                            <img src="../../../public/assets/images/post1.jpg" alt="post1" />
+                            <img src="https://elessi2.myshopify.com/cdn/shop/files/h1-banner1_V3_1296x.jpg?v=1621387571" alt="post1" />
                         </div>
                         <div className="post-content">
                             <h3>Bag Collection</h3>
@@ -20,7 +20,7 @@ export default function Posts() {
                     <div className="section-post-right-top">
                         <div className="post-right-top">
                             <div className="post-image">
-                                <img src="../../../public/assets/images/post2.png" alt="post2" />
+                                <img src="https://elessi2.myshopify.com/cdn/shop/files/h2-banner-gray_540x.png?v=1621387365" alt="post2" />
                             </div>
                             <div className="post-content">
                                 <h4>ELESSI</h4>
@@ -29,7 +29,7 @@ export default function Posts() {
                         </div>
                         <div className="post-right-top">
                             <div className="post-image">
-                                <img src="../../../public/assets/images/post3.avif" alt="post3" />
+                                <img src="https://elessi2.myshopify.com/cdn/shop/files/h1-banner2_540x.jpg?v=1621242428" alt="post3" />
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ export default function Posts() {
                     <div className="section-post-right-bottom">
                         <div className="post-right-bottom">
                             <div className="post-image">
-                                <img src="../../../public/assets/images/post4.jpg" alt="post4" />
+                                <img src="https://elessi2.myshopify.com/cdn/shop/files/h1-banner3_720x.jpg?v=1621242428" alt="post4" />
                             </div>
                             <div className="post-content">
                                 <h3>Mini backpack</h3>

@@ -18,22 +18,22 @@ export default function Banner() {
     const dataSlider = [
         {
             id: 1,
-            img: '../../../../public/assets/images/banner1.jpg',
+            img: 'https://elessi2.myshopify.com/cdn/shop/files/slider02_1296x.jpg?v=1614392001',
             title: 'NEW FASHION',
             subtitle: 'Spring Summer Collection',
-
+            
         },
-
+        
         {
             id: 2,
-            img: '../../../../public/assets/images/banner2.jpg',
+            img: 'https://elessi2.myshopify.com/cdn/shop/files/h2-new-slider3_1296x.jpg?v=1621245725',
             title: 'ELESSI STORE',
             subtitle: 'autum & winter 2024',
         },
 
         {
             id: 3,
-            img: '../../../../public/assets/images/banner3.jpg',
+            img: 'https://elessi2.myshopify.com/cdn/shop/files/slider03_1296x.jpg?v=1614392001',
             title: 'ELESSI STORE',
             subtitle: 'Looking for the best price',
         }
