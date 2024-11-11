@@ -1,0 +1,7 @@
+.footer-top{
+    width: 100%;
+    background: $TextColor4;
+    padding-block: 3.5rem;
+    border: 1px solid #0000001a;
+    @include flex(row, space-between, flex-start, 0);
+}

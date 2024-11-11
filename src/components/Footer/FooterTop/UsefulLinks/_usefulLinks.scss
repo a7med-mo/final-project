@@ -1,0 +1,27 @@
+.useful-links{
+    h2{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $TextColor1;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+    }
+
+    ul{
+        li{
+            margin-bottom: .7rem;
+            a{
+                font-size: .8rem;
+                font-weight: 400;
+                color: $TextColor1;
+                text-transform: capitalize;
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover{
+                    color: $mainColor;
+                }
+            }
+        }    
+    }
+}

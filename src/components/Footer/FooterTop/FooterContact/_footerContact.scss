@@ -1,0 +1,44 @@
+.footer-contact {
+    width: 20%;
+    @include flex(column, center, flex-start, 1rem);
+
+    .footer-logo {
+        width: 100%;
+        @include flex(row, flex-start, center, 0);
+        margin-bottom: .75rem;
+
+        img {
+            width: 5rem;
+        }
+    }
+
+    p {
+        font-size: .8rem;
+        line-height: 1.2rem;
+        font-weight: 400;
+        color: $TextColor1;
+
+    }
+
+    ul {
+        @include flex(row, flex-start, center, 1rem);
+        margin-top: .35rem;
+
+        li {
+            @include flex(row, center, center, 0);
+
+            a {
+                font-size: 1rem;
+                color: $TextColor1;
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $mainColor;
+                    scale: 1.2;
+                    translate: 0 -.1rem;
+                }
+            }
+        }
+    }
+}
