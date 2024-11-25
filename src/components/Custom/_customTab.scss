@@ -1,0 +1,22 @@
+.sp-tab-content{
+    padding: 2rem;
+    @include flex(column, center, center, 0.5rem);
+
+    ul{
+        @include flex(row, center, center, 0.5rem);
+
+        li{
+            @include flex(row, center, center, 0.5rem);
+            svg{
+                width: 2rem;
+                color: $TextColor1;
+            }
+        }
+    }
+
+    p{
+        font-size: .7rem;
+        font-weight: 400;
+        color: $TextColor1;
+    }
+}

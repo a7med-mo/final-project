@@ -1,0 +1,32 @@
+.filter-shop {
+    width: 100%;
+    padding-block: 1rem;
+
+
+    .filter-icon {
+        @include flex(row, center, center, .1rem);
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: $TextColor1;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .3s;
+
+        svg {
+            font-size: 1.3rem;
+            color: $TextColor1;
+            transition: .3s;
+        }
+
+        &:hover {
+            color: $mainColor;
+            svg {
+                color: $mainColor;
+            }
+        }
+
+    }
+
+}

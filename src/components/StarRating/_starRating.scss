@@ -1,0 +1,47 @@
+.rating {
+    .star {
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &.filled {
+            color: $star-filled-color;
+        }
+
+        &:hover {
+            color: $star-hover-color;
+        }
+    }
+}
+
+.star-rating {
+
+    @include flex(row, flex-start, center, 0);
+
+    .star-wrapper {
+        position: relative;
+        font-size: 1.1rem;
+        width: 1rem;
+        height: 1.1rem;
+
+        .star {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $star-empty-color;
+
+            &.full {
+                z-index: 1;
+            }
+
+            &.filled {
+                z-index: 2;
+                color: $star-filled-color;
+                overflow: hidden;
+                display: inline-block;
+                height: 100%;
+            }
+        }
+    }
+}
+

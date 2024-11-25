@@ -1,0 +1,72 @@
+.section-full-reviews {
+    width: 100%;
+    @include flex(row, flex-start, center, 3rem);
+
+    .box-full-reviews {
+        @include flex(column, center, center, .4rem);
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: $TextColor1;
+        }
+
+        .star-wrapper {
+            font-size: 1.4rem;
+            width: 1.3rem;
+            height: 1.4rem;
+        }
+
+        p {
+            font-size: .8rem;
+            font-weight: 400;
+            color: $TextColor1;
+        }
+
+    }
+
+    .box-bars {
+        width: 65%;
+        @include flex(row, center, center, .4rem);
+
+        .box-rating-bar {
+            width: 100%;
+            @include flex(row, flex-start, center, 1rem);
+
+            .box-rating {
+                @include flex(row, center, center, .4rem);
+                font-size: .7rem;
+                font-weight: 400;
+                color: $TextColor1;
+
+                .star-wrapper {
+                    font-size: 1rem;
+                    width: .9rem;
+                    height: 1rem;
+                }
+            }
+
+            .bar {
+                width: 40%;
+                height: .4rem;
+                background-color: $TextColor4;
+                border-radius: .2rem;
+
+                .bar-fill {
+                    height: 100%;
+                    background-color: $star-filled-color;
+                    border-radius: .2rem;
+                }
+            }
+
+            .box-number-reviews {
+                font-size: .7rem;
+                font-weight: 400;
+                color: $TextColor1;
+                border: solid 1px #0000002c;
+                border-radius: .2rem;
+                padding: .1rem .3rem;
+            }
+        }
+    }
+}

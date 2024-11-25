@@ -1,6 +1,6 @@
 .box-card {
     @include flex(column, center, center, 1rem);
-    width: calc((100% / 4) - 1rem);
+    width: calc((100% / 5) - 1rem);
     margin-bottom: 1.5rem;
     position: relative;
     cursor: pointer;
@@ -37,7 +37,7 @@
 
     .box-image-card {
         width: 100%;
-        height: 40vh;
+        height: 35vh;
         overflow: hidden;
         position: relative;
 
@@ -53,10 +53,12 @@
             opacity: 1;
             visibility: visible;
             transition: .6s;
+            object-position: center;
         }
 
-        .hover-image-card {
+        .hover-image-card{
             opacity: 0;
+            height: 100%;
             visibility: hidden;
             position: absolute;
             top: 0;
@@ -73,7 +75,7 @@
         h3 {
             color: $TextColor1;
             text-transform: capitalize;
-            font-size: 1rem;
+            font-size: .9rem;
             font-weight: 500;
             transition: 0.5s;
         }
@@ -81,7 +83,7 @@
         h4 {
             color: $TextColor2;
             text-transform: capitalize;
-            font-size: .9rem;
+            font-size: .8rem;
             font-weight: 500;
         }
     }
@@ -101,10 +103,11 @@
                 border: transparent solid 0.01rem;
 
 
-                span {
+                button {
                     background: #6c7152;
                     width: .85rem;
                     height: .85rem;
+                    border: none;
                     border-radius: 50%;
                     cursor: pointer;
                 }

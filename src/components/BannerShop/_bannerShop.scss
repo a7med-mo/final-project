@@ -1,0 +1,32 @@
+.banner-shop{
+    position: relative;
+
+    .banner-shop-content{
+        @include flex(column, center, center, 0.5rem);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h2{
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $TextColor1;
+            text-transform: capitalize;
+        }
+
+        a{
+            font-size: .8rem;
+            font-weight: 400;
+            color: $TextColor1;
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: 0.3s;            
+
+            &:hover{
+                color: $mainColor;  
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Short Sleeve Dress",
+      "description": "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.",
+      "price": "24.00",
+      "category": "Fashion",
+      "brand": "BrandY",
+      "type": "girls",
+      "stock": 20,
+      "rating": "5.0",
+      "reviews": [
+        {
+          "user": "Sarah",
+          "email": "Zs7Qa@example.com",
+          "title": "Great product!",
+          "comment": "Amazing quality and fits perfectly!",
+          "quality": 5,
+          "createdAt": "2023-10-05"
+        },
+        {
+          "user": "ahmed",
+          "email": "ahmed@gmail.com",
+          "title": "great!",
+          "comment": "great!La chamarra es muy ligera lo que la hace muy práctica y fácil de guardar o cargar. Repele muy bien el agua que es para lo que está hecha. La capucha se guarda dentro del cuello lo que lo hace un poco más resistente al frío en esa parte. No es una chamarra para el frio pero es muy buena dejando el agua afuera.",
+          "quality": 5,
+          "createdAt": "2024-11-21T11:04:24.155Z"
+        }
+      ],
+      "images": [
+        "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_4_1_360x.jpg?v=1609734033",
+        "https://elessi2.myshopify.com/cdn/shop/products/0519492505_1_1_1_360x.jpg?v=1609734011",
+        "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_1_1_360x.jpg?v=1609734015",
+        "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_3_1_360x.jpg?v=1609734018"
+      ],
+      "colors": [
+        {
+          "colorName": "Black",
+          "hexCode": "#000000",
+          "image": [
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_4_1_360x.jpg?v=1609734033",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492802_1_1_1_360x.jpg?v=1609734036",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_1_1_360x.jpg?v=1609734040",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_3_1_360x.jpg?v=1609734043"
+          ]
+        },
+        {
+          "colorName": "blue",
+          "hexCode": "#a8bcd4",
+          "image": [
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_4_1.jpg?v=1609734022",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_3_1.jpg?v=1609734025",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_1_1.jpg?v=1609734029"
+          ]
+        },
+        {
+          "colorName": "olive green",
+          "hexCode": "#6c7152",
+          "image": [
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_4_1_360x.jpg?v=1609734007",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492505_1_1_1_360x.jpg?v=1609734011",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_1_1_360x.jpg?v=1609734015",
+            "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_3_1_360x.jpg?v=1609734018"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Hoodie For Men",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum aliquid at inventore, necessitatibus dicta, minus cupiditate dolore praesentium eum nisi ratione eveniet temporibus quia repellendus eos animi aperiam optio exercitationem?.",
+      "price": "88.00",
+      "category": "Fashion",
+      "brand": "BrandY",
+      "type": "men",
+      "stock": 10,
+      "rating": "4.0",
+      "reviews": [
+        {
+          "user": "John",
+          "email": "john@example.com",
+          "title": "Great product",
+          "comment": "I loved it!",
+          "quality": 3,
+          "createdAt": "2024-11-19T12:34:56.789Z"
+        },
+        {
+          "user": "mohammed",
+          "email": "front0tech@gmail.com",
+          "title": "Awesome~!",
+          "comment": "Very nice weight and very white!",
+          "quality": 5,
+          "createdAt": "2024-11-21T11:09:30.906Z"
+        },
+        {
+          "user": "ali",
+          "email": "a7med83683@gmail.com",
+          "title": "Great choice!",
+          "comment": "So nice! i love it!",
+          "quality": 4,
+          "createdAt": "2024-11-21T11:12:57.412Z"
+        },
+        {
+          "user": "Glenn",
+          "email": "zt56864g@gmail.com",
+          "title": "True to size and a little heavier then an average windbreaker",
+          "comment": "Best jacket I've ever own. Extremely functional, I've tested it under Costa Rican pouring rain kept me really dry. It's not light like other rain jackets, still easy to carry around. One additional plus, I keep getting compliments over and over on my jacket",
+          "quality": 5,
+          "createdAt": "2024-11-21T11:20:28.473Z"
+        },
+        {
+          "user": "S5B",
+          "email": "zt56864g@gmail.com",
+          "title": "Lorem ipsum dolor sit amet.",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolore autem, tempora ratione fuga ipsa!",
+          "quality": 3,
+          "createdAt": "2024-11-23T14:48:14.912Z"
+        }
+      ],
+      "images": [
+        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_4_1_360x.jpg?v=1609387090",
+        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_3_1_360x.jpg?v=1609387090",
+        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_1_1_360x.jpg?v=1609387090",
+        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_1_1_1_360x.jpg?v=1609387090"
+      ],
+      "colors": [
+        {
+          "colorName": "Yellow",
+          "hexCode": "#f1bd1a",
+          "image": [
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_4_1_360x.jpg?v=1609387090",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_3_1_360x.jpg?v=1609387090",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_1_1_360x.jpg?v=1609387090",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_1_1_1_360x.jpg?v=1609387090"
+          ]
+        },
+        {
+          "colorName": "Blue",
+          "hexCode": "#a8bcd4",
+          "image": [
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_2_4_11_360x.jpg?v=1609387090",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_1_1_1_360x.jpg?v=1609387099",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_2_1_1_360x.jpg?v=1609387099",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_2_3_1_360x.jpg?v=1609387099"
+          ]
+        },
+        {
+          "colorName": "Pink",
+          "hexCode": "#fcc6de",
+          "image": [
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_2_4_11_360x.jpg?v=1609387099",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_1_1_1_360x.jpg?v=1609387099",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_2_1_1_360x.jpg?v=1609387099",
+            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_2_3_1_360x.jpg?v=1609387676"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ]
+    }
+  ]
+}

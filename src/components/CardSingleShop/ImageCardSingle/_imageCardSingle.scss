@@ -1,0 +1,46 @@
+.box-image-card-single {
+    width: 47.5%;
+    height: 75vh;
+    overflow: hidden; 
+    
+    @include flex(row, center, flex-start, 0.5rem);
+    
+    .images-btns {
+        @include flex(column, center, center, .1rem);
+        width: 15%;
+
+        span {
+            cursor: pointer;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                opacity: .3;
+                transition: .3s;
+
+                &.active {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+
+        }
+    }
+
+    .image-full-screen {
+        width: 80%;
+        height: 75vh;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+}

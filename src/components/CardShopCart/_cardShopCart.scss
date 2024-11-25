@@ -1,0 +1,159 @@
+.section-card-shop-cart {
+    width: 100%;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                .th-product {
+                    width: 40%;
+                    text-align: start;
+                }
+
+                th {
+                    padding-block: .5rem;
+                    border-bottom: 1px solid #0000002a;
+                    color: $TextColor1;
+                    font-size: .8rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+
+                .th-total {
+                    text-align: end;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                .td-product {
+                    width: 45%;
+                    text-align: start;
+                }
+
+                td {
+                    padding-block: 1.5rem;
+                    border-bottom: 1px solid #00000021;
+                    color: $TextColor1;
+                    font-size: .8rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    text-align: center;
+
+                    .box-product {
+                        @include flex(row, flex-start, center, 1rem);
+
+                        img {
+                            width: 7rem;
+                            height: 9rem;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+
+                        a {
+                            text-align: start;
+                            font-size: .8rem;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            color: $TextColor1;
+                            margin-block: .2rem;
+                            transition: .3s;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+
+                        p {
+                            text-align: start;
+                            font-size: .8rem;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            color: $TextColor3;
+                            margin-block: .2rem;
+
+                            span {
+                                color: $TextColor2;
+
+                                &.size {
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+
+                        .icons {
+                            margin-top: .8rem;
+                            @include flex(row, flex-start, center, 0.4rem);
+
+                            span {
+                                @include flex(row, center, center, 0);
+
+                                &.icon {
+                                    font-size: 1.08rem;
+                                    color: $TextColor2;
+                                    cursor: pointer;
+                                    transition: .3s;
+
+                                    &:hover {
+                                        color: $mainColor;
+                                    }
+                                }
+
+                                &.delete {
+                                    font-size: 1.18rem;
+                                }
+                            }
+                        }
+                    }
+
+                    &.td-price {
+                        width: 20%;
+
+                        span {
+                            font-size: .9rem;
+                        }
+                    }
+
+                    .box-stock {
+                        margin-inline: auto;
+                        @include flex(row, center, center, 0.5rem);
+                        border-block: 1px solid $TextColor3;
+                        width: fit-content;
+
+                        .count {
+                            font-size: .9rem;
+                            padding-inline: .5rem;
+                        }
+
+                        .minus,
+                        .plus {
+                            width: 1.75rem;
+                            height: 2.2rem;
+                            border-inline: 1px solid $TextColor3;
+                            @include flex(row, center, center, 0);
+                            color: $TextColor1;
+                            cursor: pointer;
+                            transition: .3s;
+
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+
+                .td-total {
+                    text-align: end;
+
+                    span {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}

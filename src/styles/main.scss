@@ -2,6 +2,7 @@
 @import './reset.scss';
 @import './function.scss';
 @import './mediaQuery.scss';
+@import '../components/WrapperField/errorInput';
 @import '../components/HeaderSection/headerSection';
 @import '../components/Header/mainHeader/header';
 @import '../components/Header/navBar/navBar';
@@ -23,5 +24,28 @@
 @import '../components/Footer/FooterTop/GetInTouch/getInTouch';
 @import '../components/Footer/FooterTop/NewsletterSignup/newsletterSignup';
 @import '../components/Footer/FooterBottom/footerBottom';
+@import '../components/BannerShop/bannerShop';
+@import '../components/FilterShop/filterShop';
+@import '../components/ProductShop/productShop';
+@import '../components/HeaderSingleShop/headerSingleShop';
+@import '../components/CardSingleShop/MainCardSingleShop/cardSingleShop';
+@import '../components/CardSingleShop/ImageCardSingle/imageCardSingle';
+@import '../components/CardSingleShop/ContentCardSingle/contentCardSingle';
+@import '../components/StarRating/starRating';
+@import '../components/CardSingleShop/BtnsCardSingleShop/btnsCardSingleShop';
+@import '../components/Dropdown/dropdown';
+@import '../components/DropdownSingleShop/dropdownSingleShop';
+@import '../components/Reviews/MainReviews/reviews';
+@import '../components/Reviews/Comment/comment';
+@import '../components/Reviews/FullReviews/fullReviews';
+@import '../components/Reviews/AddComment/addComment';
+@import '../components/Custom/customTab';
+@import '../components/YouMayAlsoLike/youMayAlsoLike';
+@import '../components/HeaderShopCart/headerShopCart';
+@import '../components/CardShopCart/cardShopCart';
+@import '../components/CartEmpty/cartEmpty';
+@import '../components/EditCardShopCart/editCardShopCart';
+// @import '../components/CardSingleShop/PriceCardSingle/priceCardSingle';
+// @import '../components/CardSingleShop/ColorCardSingle/colorCardSingle';
 
 

@@ -17,6 +17,10 @@ ul{
     text-decoration: none;
 }
 
+a{
+    text-decoration: none;
+}
+
 .btn{
     border: none;
     outline: none;
@@ -29,5 +33,29 @@ ul{
     transition: 0.3s;
     &:hover{
         background: $mainColorHover;
+    }
+}
+
+button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+textarea{
+    border: none;
+    outline: none;
+}
+
+.errorInput{
+    border: 1px solid $error !important;
+    color: $error !important;
+    &::placeholder{
+        color: $error !important;
     }
 }

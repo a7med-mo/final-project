@@ -1,27 +1,39 @@
-import { ErrorMessage, Field } from "formik";
-import ErrorInput from "./ErrorInput";
+/* eslint-disable react/prop-types */
 
-// eslint-disable-next-line react/prop-types
-export default function WrapperField({ name, title, error, touched, isPassword }) {
+import {  Field } from "formik";
+import { useEffect } from "react";
+import toast from "react-hot-toast";
+import { BiSolidError } from "react-icons/bi";
+
+export default function WrapperField({ name, title, error, touched, isPassword, isEmail, textarea }) {
+
+    const inputType = isPassword ? "password" : isEmail ? "email" : "text";
+    const inputClass = error && touched ? "errorInput" : "";
+
     return (
-        <>
-            <div className="wrapperField-input">
+        <div className="wrapperField-input">
+            <Field
+                as={textarea ? "textarea" : "input"}
+                type={inputType}
+                name={name}
+                placeholder={title}
+                className={inputClass}
+            />
+            {error && touched && <BiSolidError />}
 
-                {isPassword && (
-                    <>
-                        <Field type="password" name={name} placeholder={title} className={error && touched ? "errorInput" : ""} />
-                        <ErrorMessage name={name} component={ErrorInput} />
-                    </>
-                )}
+            {useEffect(() => {
+                if (error) {
+                    toast.error(`${error}`, {
+                        style: {
+                            fontSize: '14px',
+                            border: '1px solid #ee5353',
+                            background: '#f8e6e6',
+                            color: '#ee5353',
+                        }
+                    });
+                }
+            }, [error])}
 
-                {!isPassword && (
-                    <>
-                        <Field name={name} placeholder={title} className={error && touched ? "errorInput" : ""} />
-                        <ErrorMessage name={name} component={ErrorInput} />
-                    </>
-                )}
-
-            </div>
-        </>
-    )
+        </div>
+    );
 }

@@ -1,0 +1,6 @@
+.box-reviews {
+    width: 100%;
+    padding-block: 2rem;
+
+    @include flex(column, center, flex-start, 2rem);
+}

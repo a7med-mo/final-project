@@ -1,39 +1,44 @@
-
+/* eslint-disable react/prop-types */
 import { GrView } from "react-icons/gr";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 
+// eslint-disable-next-line react/prop-types
+export default function Card({ product }) {
 
-
-
-export default function Card() {
     return (
+
         <>
-            <div className="box-card">
-                
+            <Link className="box-card" to={`/${product.id}/${product.name}`}>
+
                 <div className="btn-card">
                     <button ><IoMdHeartEmpty /></button>
                     <button><GrView /></button>
                 </div>
-                
+
                 <div className="box-image-card">
-                    <img src="https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_4_1_360x.jpg?v=1609734007" alt="item" className="image-card" />
-                    <img src="https://elessi2.myshopify.com/cdn/shop/products/0519492505_1_1_1_360x.jpg?v=1609734011" alt="item" className="hover-image-card"/>
+                    <img src={product?.images[0]} alt={product?.name} className= "image-card" />
+                    <img src={product?.images[1]} alt={product?.name} className= "hover-image-card" />
                 </div>
 
                 <div className="box-content-card">
-                    <h3>Short Sleeve Dress</h3>
-                    <h4>$24.00</h4>
+                    <h3>{product?.name}</h3>
+                    <h4>${product?.price}</h4>
                 </div>
 
                 <div className="box-color">
                     <ul>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                        <li><span></span></li>
+                        {product?.colors?.map((color) => (
+                            <li key={color.colorName}>
+                                <button style={{ background: `${color.hexCode}` }}></button>
+                            </li>
+                        ))}
                     </ul>
                 </div>
-            </div>
+
+            </Link>
         </>
     )
+
 }

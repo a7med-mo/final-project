@@ -1,0 +1,29 @@
+.header-shop-cart{
+    @include flex(column, center, center, 0.5rem);
+    margin-top: 4.25rem;
+    background: $TextColor5;
+    padding: 2.5rem;
+
+    h2{
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: $TextColor1;
+        text-transform: capitalize;
+    }
+
+    a{
+        font-size: .75rem;
+        font-weight: 400;
+        color: $TextColor1;
+        text-transform: capitalize;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover{
+            color: $mainColor;
+            text-decoration: underline;
+        }
+    }
+}

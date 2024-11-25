@@ -1,0 +1,57 @@
+.comment {
+    width: 100%;
+    padding-block: .2rem;
+    @include flex(column, flex-start, flex-start, .5rem);
+
+    .user-comment {
+        @include flex(row, flex-start, center, .5rem);
+        background: $TextColor4;
+        border-radius: 1.1rem;
+        padding-block: .2rem;
+        padding-inline: .2rem .8rem;
+
+        .user-avatar {
+            span {
+                font-size: .75rem;
+            }
+        }
+
+        h3 {
+            font-size: .75rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $TextColor1;
+        }
+    }
+
+    .box-rating-time {
+        @include flex(row, flex-start, center, .5rem);
+
+        .star-rating {
+            .star {
+                font-size: 1.05rem;
+            }
+        }
+
+        .date-time {
+            font-size: .7rem;
+            font-weight: 500;
+            color: $TextColor2;
+        }
+    }
+
+    h2 {
+        font-size: .8rem;
+        font-weight: 600;
+        color: $TextColor1;
+        text-transform: capitalize;
+    }
+
+    p {
+        width: 65%;
+        font-size: .65rem;
+        font-weight: 400;
+        line-height: 1.1rem;
+        color: $TextColor1;
+    }
+}

@@ -1,0 +1,149 @@
+.btn-review {
+    @include flex(row, flex-end, center, 0);
+    padding: 0.6rem 1rem;
+    margin-bottom: 1.5rem;
+    background: $star-filled-color;
+    color: #fff;
+    font-size: .7rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background: $star-hover-color;
+    }
+}
+
+.add-comment {
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    @include flex(column, center, center, 0.5rem);
+
+    .add-comment-form {
+        @include flex(column, flex-start, flex-start, 1rem);
+        width: 35%;
+        padding: 2rem 1.5rem;
+        background: #fff;
+        position: relative;
+
+        .close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            color: $TextColor2;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: $TextColor1;
+                scale: 1.05;
+                rotate: 180deg;
+            }
+        }
+
+        .box-rate {
+            @include flex(row, flex-start, flex-start, .5rem);
+            width: 100%;
+
+
+            font-size: .8rem;
+            text-transform: capitalize;
+            font-weight: 400;
+            color: $TextColor2;
+
+
+            .star {
+                font-size: 1.2rem;
+            }
+        }
+
+
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $TextColor1;
+            text-transform: capitalize;
+        }
+
+        .wrapperField-input {
+            width: 100%;
+            position: relative;
+
+            input {
+                width: 100%;
+                border: 1px solid $TextColor3;
+                padding: .6rem;
+                font-size: .6rem;
+                font-weight: 400;
+                color: $TextColor1;
+
+                &:focus {
+                    border: 1px solid $TextColor1;
+                }
+
+                &::placeholder {
+                    font-size: .6rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                right: .7rem;
+                transform: translateY(-50%);
+                font-size: .8rem;
+                color: $error;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 10rem;
+            border: 1px solid $TextColor3;
+            padding: 1rem;
+            resize: none;
+            font-size: .7rem;
+            font-weight: 400;
+            color: $TextColor1;
+
+            &:focus {
+                border: 1px solid $TextColor1;
+            }
+
+            &::placeholder {
+                font-size: .7rem;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+
+        button {
+            @include flex(row, flex-end, center, 0);
+            padding: 0.6rem 1rem;
+            margin-bottom: 1.5rem;
+            background: $star-filled-color;
+            color: #fff;
+            font-size: .7rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background: $star-hover-color;
+            }
+        }
+    }
+
+}

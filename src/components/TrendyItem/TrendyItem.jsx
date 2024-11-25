@@ -1,4 +1,4 @@
-import Card from "../Card/Card";
+import Cards from "../Cards/Cards";
 import HeaderSection from "../HeaderSection/HeaderSection";
 
 export default function TrendyItem() {
@@ -7,14 +7,11 @@ export default function TrendyItem() {
             <HeaderSection title="trendy item" />
 
             <div className="box-trendy-item px">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
             </div>
         </>
     )

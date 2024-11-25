@@ -1,0 +1,94 @@
+.content-card-single {
+    @include flex(column, flex-start, flex-start, .5rem);
+    width: 50%;
+
+    h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $TextColor1;
+
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $TextColor1;
+    }
+
+    h4 {
+        width: 100%;
+        font-size: .68rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        word-spacing: .1rem;
+        letter-spacing: .09rem;
+        color: $TextColor2;
+        margin-block: .66rem .3rem;
+    }
+
+    p {
+        font-size: .8rem;
+        font-weight: 400;
+        color: $TextColor2;
+        line-height: 1.3rem;
+    }
+
+    .reviews {
+        @include flex(row, flex-start, center, .5rem);
+
+        p{
+            text-transform: lowercase
+        }
+    }
+
+    ul {
+        @include flex(row, flex-start, center, 0.2rem);
+
+        li {
+            @include flex(row, center, center, 0.3rem);
+            padding: .15rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            border: transparent solid 0.01rem;
+
+
+            span {
+                @include flex(row, center, center, 0);
+                width: 1.3rem;
+                height: 1.3rem;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            &:hover {
+                border: #000000d7 solid 0.01rem;
+            }
+
+            &.active {
+                border: #000000d7 solid 0.01rem;
+            }
+
+            &.size {
+                border: #00000031 solid 0.02rem;
+                color: $TextColor1;
+                font-size: .8rem;
+                padding: .05rem;
+                margin-right: .25rem;
+
+                &.active {
+                    background: $TextColor1;
+                    color: #fff;
+                }
+
+                &:hover {
+                    border: $TextColor1 solid 0.02rem;
+                }
+
+            }
+        }
+
+    }
+
+}

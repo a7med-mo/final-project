@@ -2,7 +2,8 @@ nav{
     ul{
         @include flex(row, center, center, 1rem);
 
-        li{
+        li, a{
+            position: relative;
             @include flex(row, center, center, 0);
             font-size: 1.65rem;
             cursor: pointer;
@@ -10,6 +11,18 @@ nav{
             color: $TextColor2;
             &:hover{
                 color: $mainColor;
+            }
+
+            span{
+                @include flex(row, center, center, 0);
+                position: absolute;
+                top: -.15rem;
+                right: -.4rem;
+                font-size: .57rem;
+                color: #fff;
+                background: $mainColor;
+                padding: 0.1rem 0.2rem;
+                border-radius: 40%;
             }
         }
     }

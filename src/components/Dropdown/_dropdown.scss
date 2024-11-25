@@ -1,0 +1,39 @@
+.dropdown {
+    width: 100%;
+    margin-block: .5rem;
+
+    .dropbtn {
+        font-size: .7rem;
+        text-align: start;
+        text-transform: uppercase;
+        width: 100%;
+        border: 0.01rem solid #0000001c;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        border: 0.01rem solid #0000001c;
+        border-top: none;
+        visibility: hidden; 
+        transition: max-height 0.3s ease, visibility 0.3s ease;
+        padding: 0; 
+
+        a{
+            display: block;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+
+        &.active {
+            visibility: visible; 
+            padding: 0.75rem 1rem; 
+        }
+    }
+}
