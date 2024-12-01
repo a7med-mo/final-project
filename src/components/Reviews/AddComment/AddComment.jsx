@@ -6,10 +6,11 @@ import WrapperField from "../../WrapperField/WrapperField";
 import { IoMdClose } from "react-icons/io";
 import Rating from "../../StarRating/Rating";
 import * as Yup from "yup";
-import toast from "react-hot-toast";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { axiosConfig } from "../../../utils/axiosConfig";
 import { useParams } from "react-router-dom";
+import { ShowToastError } from "../../showToastError/showToastError ";
+import { ShowToastSuccess } from "../../ShowToastSuccess/ShowToastSuccess";
 
 export default function AddComment({ refetchReviews }) {
     const { id } = useParams();
@@ -29,18 +30,10 @@ export default function AddComment({ refetchReviews }) {
             queryClient.invalidateQueries({ queryKey: ['product', id] });
             refetchReviews();
             setOpen(false); 
-            toast.success("Review submitted successfully!");
+            ShowToastSuccess({ message: "Review submitted successfully!" });
         },
         onError: (error) => {
-            toast.error(error.response?.data?.message || "Failed to submit the review.", {
-                style: {
-                    fontSize: "16px",
-                    border: "1px solid #e74c3c",
-                    background: "#f8d7da",
-                    padding: "14px",
-                    color: "#e74c3c",
-                },
-            });
+            ShowToastError({ message: error.response?.data?.message || "Failed to submit the review." });
         },
     });
 

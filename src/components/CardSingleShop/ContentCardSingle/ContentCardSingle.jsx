@@ -12,14 +12,15 @@ export default function ContentCardSingle({ product, selectedColorI, setSelected
     const iColor = (i) => {
         setSelectedColorI(i);
 
-        const newProductItem = {
+        const newCartProduct = {
             ...productItem,
             colorName: product?.colors[i]?.colorName,
             hexCode: product?.colors[i]?.hexCode,
+            indexColor: i,
             image: product?.colors[i]?.image[0]
         };
 
-        setProductItem(newProductItem);
+        setProductItem(newCartProduct);
     };
 
 
@@ -27,12 +28,13 @@ export default function ContentCardSingle({ product, selectedColorI, setSelected
     const iSize = (i) => {
         setIsSize(i);
 
-        const newProductItem = {
+        const newCartProduct = {
             ...productItem,
-            size: product?.sizes[i]
+            size: product?.sizes[i],
+            indexSize: i
         };
 
-        setProductItem(newProductItem);
+        setProductItem(newCartProduct);
     };
 
 

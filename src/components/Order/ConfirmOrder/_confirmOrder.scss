@@ -1,0 +1,61 @@
+.box-confirm-order {
+    @include flex(column, flex-start, flex-start, .5rem);
+
+    h4{
+        font-size: .7rem;
+        text-transform: capitalize;
+        font-weight: 500;
+        color: $TextColor2;
+    }
+    
+    .section-checkBox {
+        @include flex(row, flex-start, center, 0.5rem);
+        width: 100%;
+
+        label {
+            font-size: .7rem;
+            font-family: 500;
+            color: $TextColor1;
+        }
+
+        .checkbox {
+            @include flex(row, center, center, 0);
+            width: .75rem;
+            height: .75rem;
+            border: 1px solid $TextColor3;
+            cursor: pointer;
+            transition: .15s;
+
+            svg {
+                display: none;
+                font-size: .5rem;
+                color: aliceblue;
+            }
+
+            &.active {
+                background-color: $mainColor;
+                border-color: $mainColor;
+
+                svg {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    a {
+
+        left: 0;
+        width: 50%;
+        margin-block: .7rem 0;
+        text-align: center;
+        opacity: .5;
+        cursor: not-allowed;
+
+        &.active {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+}

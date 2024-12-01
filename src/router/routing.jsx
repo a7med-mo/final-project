@@ -5,6 +5,8 @@ import Error from "../pages/Error/Error";
 import Shop from "../pages/shop/Shop";
 import SingleShop from "../pages/singleShop/SingleShop";
 import ShopCart from "../pages/ShopCart/ShopCart";
+import Wishlist from "../pages/Wishlist/Wishlist";
+import CheckOut from "../pages/checkOut/CheckOut";
 
 
 export const routes = createBrowserRouter([
@@ -29,6 +31,14 @@ export const routes = createBrowserRouter([
             {
                 path: "/shopCart",
                 element: <ShopCart />,
+            },
+            {
+                path: "/wishlist",
+                element: <Wishlist />,
+            },
+            {
+                path: "checkout",
+                element: <CheckOut />,
             }
         ],
     },

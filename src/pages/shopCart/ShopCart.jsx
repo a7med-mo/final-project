@@ -1,8 +1,8 @@
 
 import CardsShopCart from "../../components/CardsShopCart/CardsShopCart";
-import HeaderShopCart from "../../components/HeaderShopCart/HeaderShopCart";
 import { useQuery } from "@tanstack/react-query";
 import { axiosConfig } from "../../utils/axiosConfig";
+import HeaderPages from "../../components/HeaderPages/HeaderPages";
 
 
 export default function ShopCart() {
@@ -21,7 +21,7 @@ export default function ShopCart() {
 
     return (
         <>
-            <HeaderShopCart />
+            <HeaderPages title="Shop Cart" link="" nameLink="home" />
             <CardsShopCart product={data?.data} />
         </>
     )

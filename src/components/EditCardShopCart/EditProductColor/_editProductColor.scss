@@ -1,0 +1,51 @@
+
+
+.edit-popap-color {
+    @include flex(row, center, center, .2rem);
+    margin: auto;
+    h4 {
+        font-size: .7rem;
+        font-weight: 500;
+        color: $TextColor1;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        margin-bottom: .4rem;
+    }
+    li {
+        @include flex(row, center, center, 0.3rem);
+        padding: .1rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+        border: transparent solid 0.01rem;
+        span {
+            @include flex(row, center, center, 0);
+            width: 1.2rem;
+            height: 1.2rem;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        &:hover {
+            border: #000000d7 solid 0.01rem;
+        }
+        &.active {
+            border: #000000d7 solid 0.01rem;
+        }
+        &.size {
+            border: #00000031 solid 0.02rem;
+            color: $TextColor1;
+            font-size: .8rem;
+            padding: .05rem;
+            text-align: center;
+            &.active {
+                background: $TextColor1;
+                color: #fff;
+            }
+            &:hover {
+                border: $TextColor1 solid 0.02rem;
+            }
+        }
+    }
+}

@@ -16,11 +16,15 @@ export default function CardSingleShop({ product }) {
         name: product.name,
         price: product.price,
         stock: product.stock,
+        colors: product.colors,
+        sizes: product.sizes,
+        indexColor: 0,
+        indexSize: 0,
         colorName: product.colors[0]?.colorName || "Default Color",
         image: product.colors[0]?.image?.[0] || "default-image.jpg",
         size: product.sizes?.[0] || "Default Size",
     });
-console.log(productItem);
+    
 
     return (
         <div className="card-single-shop px">

@@ -4,11 +4,13 @@ import { AiOutlineProduct } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../Store/CartContext";
+import { WishlistContext } from "../../WishlistContaxt/WishlistContaxt";
 
 
 export default function NavBar() {
 
     const cart = useContext(CartContext);
+    const {wishlist} = useContext(WishlistContext);
 
     return (
         <>
@@ -24,8 +26,11 @@ export default function NavBar() {
                     </li>
 
                     <li className="none">
-                        <Link>
+                        <Link to={"/wishlist"}>
                             <CiHeart />
+                            <span>
+                                {wishlist.length}
+                            </span>
                         </Link>
                     </li>
 

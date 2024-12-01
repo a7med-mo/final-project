@@ -1,0 +1,30 @@
+.box-stock-popap {
+    border-radius: 1rem;
+    border: 1px solid $TextColor3;
+    @include flex(row, center, center, 1rem);
+
+    button {
+        @include flex(row, center, center, 1rem);
+        border: none;
+        padding: .6rem .65rem;
+        font-size: .9rem;
+    }
+
+    .minus {
+        border-right: 1px solid $TextColor3;
+    }
+
+    .plus {
+        border-left: 1px solid $TextColor3;
+    }
+
+    .count {
+        font-size: 1rem;
+        padding-inline: .3rem;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: $mainColor;
+    }
+}

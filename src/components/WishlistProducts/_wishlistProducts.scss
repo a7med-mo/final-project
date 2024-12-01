@@ -1,0 +1,4 @@
+.section-wishlist-products{
+    @include flex(row, center, flex-start, 1rem);
+    margin-block: 3.5rem 4rem;
+}

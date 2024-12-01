@@ -25,12 +25,16 @@
             box-shadow: .1rem .1rem .01rem rgba(30, 30, 30, 0.115);
             cursor: pointer;
             font-size: .9rem;
-            color: $TextColor1;
+            color: $TextColor3;
             transition: 0.5s;
+            
+            .like{
+                color: $mainColor;
+            }
 
             &:hover {
-                color: #fff;
-                background: #000;
+                color: $mainColorHover;
+                background: $TextColor5;
             }
         }
     }

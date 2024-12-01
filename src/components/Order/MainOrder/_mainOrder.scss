@@ -1,0 +1,5 @@
+.section-main-order{
+    width: 100%;
+    @include flex(row, space-between, flex-start, 0);
+    margin-block: 2rem;
+}

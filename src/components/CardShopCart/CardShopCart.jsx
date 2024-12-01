@@ -5,7 +5,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { FiEdit } from "react-icons/fi";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import EditCardShopCart from "../EditCardShopCart/EditCardShopCart";
+import EditCardShopCart from "../EditCardShopCart/MainEditCardShopCart/EditCardShopCart";
 
 
 export default function CardShopCart({ index, item, deleteItem, editItem, product }) {
@@ -61,6 +61,7 @@ export default function CardShopCart({ index, item, deleteItem, editItem, produc
                                         item={item}
                                         handleOpen={handleOpen}
                                         editItem={editItem}
+                                        className="edit-active"
                                     /> : ''}
                                 <span className="icon edit">
                                     <FiEdit onClick={handleOpen} />
