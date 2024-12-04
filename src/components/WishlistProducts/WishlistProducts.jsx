@@ -13,14 +13,15 @@ export default function WishlistProducts() {
 
     return (
         <>
-            <div className="section-wishlist-products px">
 
+            <div className="section-wishlist-products px">
                 {wishlist.length > 0 ?
                     wishlist.map((product) => (
                         <Card key={product.id} product={product} />
                     ))
                     : <WishlistEmpty />}
             </div>
+            
         </>
     )
 }

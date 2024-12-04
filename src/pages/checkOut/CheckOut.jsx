@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import ViewOrderDetails from "../../components/ViewOrderDetails/ViewOrderDetails";
 import EnterUserData from "../../components/EnterUserData/EnterUserData";
 import { useContext } from "react";
@@ -10,15 +9,12 @@ export default function CheckOut() {
 
     const { cartItems} = useContext(CartContext);
 
-    const location = useLocation();
-    const dataCart = location.state?.dataCart || { total: 0 };
-
     return (
         <>
             <CheckOutHeader />
             <div className="check-out">
                 <EnterUserData />
-                <ViewOrderDetails dataCart={dataCart} cartItems={cartItems} />
+                <ViewOrderDetails cartItems={cartItems} />
             </div>
         </>
     )

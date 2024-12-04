@@ -7,16 +7,6 @@ export default function ProductShop() {
         <>
             <div className="card-broduct-shop px">
                 <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
             </div>
 
             <div className="pagination-page">

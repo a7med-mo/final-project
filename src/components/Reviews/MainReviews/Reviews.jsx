@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import FullReviews from '../FullReviews/FullReviews';
 import AddComment from '../AddComment/AddComment';
 import Comment from '../Comment/Comment';
@@ -10,20 +8,33 @@ import { useParams } from 'react-router-dom';
 export default function Reviews() {
     const { id } = useParams();
 
-    const { data, refetch } = useQuery({
-        queryKey: ['product', id],
+    const { data, isLoading, error, refetch } = useQuery({
+        queryKey: ['review', id],
         queryFn: () => axiosConfig({
             method: 'get',
-            url: `/products/${id}`,
+            url: `/products?id=eq.${id}&select=id,name,reviews`
         }),
         refetchOnWindowFocus: false,
     });
 
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        console.error(error);
+        return <div>Error fetching data</div>;
+    }
+
+    if (!data || !data.data || data.data.length === 0) {
+        return <div>No reviews available</div>;
+    }
+
     return (
         <div className="box-reviews px">
-            <FullReviews product={data?.data} />
-            <AddComment refetchReviews={refetch} />
-            <Comment product={data?.data} />
+            <FullReviews product={data?.data[0]} />
+            <AddComment refetchReviews={refetch} product={data?.data[0]} />
+            <Comment product={data?.data[0]} />
         </div>
     );
 }

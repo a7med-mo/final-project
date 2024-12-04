@@ -18,6 +18,7 @@ export default function WrapperField({ name, title, error, touched, isPassword, 
                 className={inputClass}
             />
             {error && touched && <BiSolidError />}
+            {error && touched && <span className="error">{error}</span>}
         </div>
     );
 }

@@ -54,7 +54,6 @@ textarea{
 
 .errorInput{
     border: 1px solid $error !important;
-    color: $error !important;
     &::placeholder{
         color: $error !important;
     }

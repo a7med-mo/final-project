@@ -7,7 +7,7 @@ export default function MainOrder({ total }) {
     return (
         <>
             <div className="section-main-order px">
-                <ConfirmOrder total={total} />
+                <ConfirmOrder />
                 <OrderInformation total={total} />
             </div>
         </>

@@ -4,6 +4,11 @@
     height: 7.5vh;
     border-bottom: 1px solid #0000001a;
     padding-inline: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #fff;
 
     .logo {
         h2 {

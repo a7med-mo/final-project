@@ -1,0 +1,33 @@
+.international-shipping{
+
+    margin-block: 1rem 1.5rem;
+
+    h2{
+        font-size: .8rem;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .box-international-shipping{
+        @include flex(row, space-between, center, 1rem);
+        width: 80%;
+        margin-top: .5rem;
+        padding-block: .65rem;
+        padding-inline: 1rem;
+        border-radius: .3rem;
+        border: 1px solid $blue;
+        background: #e8f3fb;
+
+        span{
+            font-size: .7rem;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .free{
+            text-transform: uppercase;
+            font-size: .65rem;
+        }
+    }
+
+}

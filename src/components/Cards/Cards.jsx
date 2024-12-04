@@ -11,7 +11,7 @@ export default function Cards() {
             queryKey: ['product'],
             queryFn: () => axiosConfig({
                 method: 'get',
-                url: '/products'
+                url: `/products?limit=5`
             })
         }
     )
@@ -24,9 +24,8 @@ export default function Cards() {
     return (
         <>
             {data?.data?.map((product) => (
-                    <Card key={product?.id} product={product} />
-            ))
-            }
+                <Card key={product?.id} product={product} />
+            ))}
         </>
     )
 

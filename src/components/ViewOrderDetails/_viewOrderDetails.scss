@@ -2,7 +2,7 @@
 
     width: 45%;
     height: 100vh;
-    padding-inline: 1rem 4.5rem;
+    padding-inline: 2rem 5rem;
     padding-block: 2rem;
     background: $TextColor5;
     border-left: 1px solid #0000001a;
@@ -10,6 +10,8 @@
     top: 7.5vh;
     right: 0;
     z-index: 1000;
+
+    
 
     .box-view-order-details {
         @include flex(column, flex-start, flex-start, 1rem);
@@ -91,27 +93,31 @@
 
             form {
                 width: 100%;
-                @include flex(row, space-between, center, 1rem);
+                @include flex(row, space-between, center, 0);
                 margin-block: .8rem .6rem;
 
-                input {
-                    width: 155%;
-                    padding: .75rem;
-                    border-radius: .4rem;
-                    border: #0000002a solid 1px;
-                    background: #fff;
-                    transition: .3s;
+                .wrapperField-input {
+                    margin: 0;
+                    width: 77%;
+                    input {
+                        width: 100%;
+                        padding: .75rem;
+                        border-radius: .4rem;
+                        border: #0000002a solid 1px;
+                        background: #fff;
+                        transition: .3s;
 
-                    &::placeholder {
-                        font-size: .7rem;
-                        font-weight: 400;
+                        &::placeholder {
+                            font-size: .7rem;
+                            font-weight: 400;
+                        }
+
+                        &:focus {
+                            border: $blue solid 1px;
+                            outline: $blue solid 1px;
+                        }
+
                     }
-
-                    &:focus {
-                        border: $blue solid 1px;
-                        outline: $blue solid 1px;
-                    }
-
                 }
 
                 button {
@@ -132,6 +138,7 @@
                         color: #fff;
                     }
                 }
+                
             }
 
 

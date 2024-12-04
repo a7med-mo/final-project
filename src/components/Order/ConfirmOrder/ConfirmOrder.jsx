@@ -1,13 +1,11 @@
-/* eslint-disable react/prop-types */
-
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { ShowToastError } from "../../showToastError/showToastError ";
 
-export default function ConfirmOrder({ total }) {
+export default function ConfirmOrder() {
     const [checked, setChecked] = useState(false);
-    const dataCart = { total };
+
 
     const handleCheckboxChange = () => {
         setChecked((prev) => !prev);
@@ -36,8 +34,7 @@ export default function ConfirmOrder({ total }) {
 
             <Link
                 className={`btn ${checked ? "active" : ""}`}
-                to="/checkout"
-                state={checked ? { dataCart } : null}
+                to= {checked ? "/checkout" : "#"}
                 onClick={handleClick}
             >
                 Check Out

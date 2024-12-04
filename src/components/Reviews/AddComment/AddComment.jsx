@@ -12,7 +12,7 @@ import { useParams } from "react-router-dom";
 import { ShowToastError } from "../../showToastError/showToastError ";
 import { ShowToastSuccess } from "../../ShowToastSuccess/ShowToastSuccess";
 
-export default function AddComment({ refetchReviews }) {
+export default function AddComment({ refetchReviews, product }) {
     const { id } = useParams();
     const [open, setOpen] = useState(false);
 
@@ -22,12 +22,14 @@ export default function AddComment({ refetchReviews }) {
 
     const addNewReview = useMutation({
         mutationFn: (values) => axiosConfig({
-            method: 'post',
-            url: `/products/${id}/reviews`,
-            data: values,
+            method: 'patch', 
+            url: `/products?id=eq.${id}`,
+            data: {
+                reviews: [...product.reviews, values],
+            },
         }),
         onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['product', id] });
+            queryClient.invalidateQueries({ queryKey: ['review', id] });
             refetchReviews();
             setOpen(false); 
             ShowToastSuccess({ message: "Review submitted successfully!" });
@@ -46,8 +48,10 @@ export default function AddComment({ refetchReviews }) {
     };
 
     const onSubmit = (values, { resetForm }) => {
-        const postData = { ...values, createdAt: new Date().toISOString() };
-        addNewReview.mutate(postData);  
+        const postData = { ...values, createdAt: new Date()?.toISOString() };
+        addNewReview?.mutate(postData);  
+        console.log(values);
+        
         resetForm();
     };
 

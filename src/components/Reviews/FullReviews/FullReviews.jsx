@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import { useQuery } from "@tanstack/react-query";
 import StarRating from "../../StarRating/StarRating";
@@ -53,15 +53,20 @@ const FullReviews = ({ product }) => {
         queryFn: () =>
             axiosConfig({
                 method: 'patch',
-                url: `/products/${id}`,
+                url: `/products?id=eq.${id}`,
                 data: { rating: averageRating.toFixed(1) }, 
             }),
         enabled: !!id && !!averageRating,
         onSuccess: (data) => {
-            console.log('Rating updated successfully:', data);
+            console.log(data);
+            queryClient.invalidateQueries({ queryKey: ['reviews', id] });
+            refetchReviews();
+            setOpen(false);
+            ShowToastSuccess({ message: "Review submitted successfully!" });
         },
         onError: (error) => {
-            console.error('Error updating rating:', error);
+            console.error(error); 
+            ShowToastError({ message: error.response?.data?.message || "Failed to submit the review." });
         },
     });
 

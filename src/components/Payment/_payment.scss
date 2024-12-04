@@ -1,0 +1,30 @@
+.box-payment{
+
+    margin-top: 1.2rem;
+
+    h2{
+        font-size: .9rem;
+        font-weight: 600;
+        color: #000;
+        text-transform: capitalize;
+        margin-bottom: .3rem;
+    }
+
+    p{
+        font-size: .7rem;
+        font-weight: 400;
+        color: $TextColor2;
+        margin-bottom: .5rem;
+    }
+
+    .box-payment-info{
+        @include flex(column, space-between, center, 0);
+        width: 80%;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        margin-bottom: .5rem;
+        background: $TextColor4;
+
+    }
+
+}
