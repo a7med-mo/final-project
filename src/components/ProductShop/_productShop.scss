@@ -1,44 +1,55 @@
-.card-broduct-shop{
+.card-broduct-shop {
 
     @include flex(row, center, flex-start, 1rem);
     margin-block: 1rem 1rem;
-    
+
 }
 
-.pagination-page{
+.pagination-page {
     @include flex(row, center, center, .5rem);
     margin-block: .5rem 3rem;
-    
-    span{
-        width: 1.9rem;
-        height: 1.9rem;
-        border-radius: 50%;
-        font-size: .8rem;
-        font-weight: 600;
-        color: $TextColor1;
-        @include flex(row, center, center, 0);
-        cursor: pointer;
-        transition: .3s;
 
-        &.active{
-            background: $mainColor;
-            color: #fff;
-        }
+    ul {
+        @include flex(row, center, center, .5rem);
+        margin: auto;
+        li {
+            span {
+                width: 1.9rem;
+                height: 1.9rem;
+                border-radius: 50%;
+                font-size: .8rem;
+                font-weight: 600;
+                color: $TextColor1;
+                @include flex(row, center, center, 0);
+                cursor: pointer;
+                transition: .3s;
 
-        &:hover{
-            background: $TextColor4;
-            color: $mainColor;
+                &.active {
+                    background: $mainColor;
+                    color: #fff;
+                }
+
+                &:hover {
+                    background: $TextColor4;
+                    color: $mainColor;
+                }
+            }
         }
     }
 
-    svg{
+    svg {
         font-size: 2.3rem;
         color: $TextColor2;
         cursor: pointer;
         transition: 0.3s;
-        
-        &:hover{
+
+        &:hover {
             color: $mainColor;
         }
     }
+}
+
+.loading{
+    @include flex(row, center, center, 0);
+    margin-block: 2rem;
 }

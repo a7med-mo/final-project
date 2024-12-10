@@ -41,7 +41,7 @@ export default function SingleShop() {
             <HeaderSingleShop product={data[0]} />
             <CardSingleShop product={data[0]} />
             <DropdownSingleShop product={data[0]} />
-            <YouMayAlsoLike product={data[0]} />
+            <YouMayAlsoLike product={data[0]} products={data} />
         </>
     );
 }

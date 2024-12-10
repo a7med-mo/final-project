@@ -1,19 +1,21 @@
-nav{
-    ul{
+nav {
+    ul {
         @include flex(row, center, center, 1rem);
 
-        li, a{
+        li,
+        a {
             position: relative;
             @include flex(row, center, center, 0);
             font-size: 1.65rem;
             cursor: pointer;
             transition: 0.3s;
             color: $TextColor2;
-            &:hover{
+
+            &:hover {
                 color: $mainColor;
             }
 
-            span{
+            span {
                 @include flex(row, center, center, 0);
                 position: absolute;
                 top: -.15rem;
@@ -28,15 +30,55 @@ nav{
     }
 }
 
+.navbar-mobile{
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
-    nav{
-    ul{
-        li{
-            font-size: 3rem;
-            &.none{
-                display: none;
+    nav {
+        ul {
+            li,a {
+                svg {
+                    font-size: 2.5rem;
+                }
+                span {
+                    @include flex(row, center, center, 0);
+                    position: absolute;
+                    top: -.15rem;
+                    right: -.3rem;
+                    font-size: .75rem;
+                    color: #fff;
+                    background: $mainColor;
+                    padding: 0.25rem 0.3rem;
+                    border-radius: 40%;
+                }
+
+                &.none {
+                    display: none;
+                }
             }
         }
     }
-}
+
+    .navbar-mobile{
+        position: fixed;
+        z-index: 4;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-block: 1rem;
+        padding-inline: 5rem;
+        display: block;
+        background: #fff;
+        border-top: 1px solid #0000003a;
+
+        ul {
+            @include flex(row, space-between, center, 1rem);
+            li {
+                svg {
+                    font-size: 2.9rem;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,77 @@
+.box-login {
+    @include flex(column, center, center, 1rem);
+    width: 100%;
+    height: 100vh;
+    padding-block: 2rem;
+    position: relative;
+
+    form {
+        background: $TextColor5;
+        box-shadow: 0 0 1rem .3rem #0000002a;
+        @include flex(column, flex-start, center, 1rem);
+        width: 40%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $TextColor1;
+            text-transform: capitalize;
+            margin-block: 2rem;
+        }
+
+        .wrapperField-input {
+            width: 75%;
+            position: relative;
+            input {
+                width: 100%;
+                padding-block: .8rem;
+                padding-inline: .5rem;
+                border: 1px solid #0000003a;
+                font-size: .8rem;
+                font-weight: 400;
+                color: $TextColor1;
+                background: #fff;
+            }
+
+            svg{
+                position: absolute;
+                top: 33%;
+                right: .7rem;
+                transform: translateY(-50%);
+                font-size: .8rem;
+                color: $error;
+            }
+        }
+
+        button {
+            width: 75%;
+            padding-block: .85rem;
+            margin-top: .5rem;
+        }
+
+        p {
+            margin-block: 1rem 2.5rem;
+            font-size: .75rem;
+            font-weight: 400;
+            color: $TextColor1;
+            text-transform: capitalize;
+            cursor: pointer;
+
+            a {
+                color: $mainColor;
+                transition: .3s;
+                margin-left: .3rem;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $mainColorHover;
+                }
+            }
+        }
+    }
+}

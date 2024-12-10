@@ -1,0 +1,160 @@
+.box-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000af;
+    z-index: 14;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease 0s;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .custom-offcanvas {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 30%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: 0 0 .6rem #ffffff38;
+        transition: right 0.3s ease;
+        z-index: 15;
+
+        &.show {
+            right: 0;
+        }
+
+        .custom-offcanvas-header {
+            @include flex(row, space-between, center, 1rem);
+            width: 100%;
+            padding: .8rem;
+            border-bottom: 1px solid #0000002a;
+
+            h2 {
+                font-size: .8rem;
+                font-weight: 600;
+                color: $TextColor1;
+                text-transform: uppercase;
+            }
+
+            svg {
+                font-size: 1.3rem;
+                color: $TextColor2;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                    color: $mainColor;
+                    rotate: 180deg;
+                }
+            }
+        }
+
+        .box-search {
+            @include flex(row, center, center, 1rem);
+            margin: auto;
+            margin-block: 1rem;
+            width: 90%;
+            height: 5vh;
+            padding: .8rem;
+            border: 1px solid #0000002a;
+            position: relative;
+            overflow: hidden;
+
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: .5rem;
+                padding-right: 2rem;
+                font-size: .8rem;
+                transition: .3s;
+            }
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                right: .7rem;
+                transform: translateY(-50%);
+                font-size: 1rem;
+                color: $TextColor2;
+                transition: .3s;
+            }
+        }
+
+        .box-cards {
+            width: 100%;
+            height: 80vh;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: .5rem;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: $TextColor4;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $TextColor3;
+                border-radius: 1rem;
+            }
+
+            .no-products{
+                font-size: 1rem;
+                text-align: center;
+                position: relative;
+                top: 40%;
+                transform: translateY(-50%);
+            }
+
+            .card {
+                width: 100%;
+                @include flex(row, flex-start, flex-start, 1rem);
+                padding: .8rem;
+                border-bottom: 1px solid #0000002a;
+                transition: .3s;
+
+                a.box-image {
+                    width: 20%;
+                    height: 4.8rem;
+                    overflow: hidden;
+                    border-radius: .5rem;
+                    background-color: aqua;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                a.box-content {
+                    @include flex(column, flex-start, flex-start, .5rem);
+                    width: 50%;
+
+                    h2 {
+                        font-size: .8rem;
+                        font-weight: 500;
+                        color: $TextColor1;
+                    }
+
+                    h4 {
+                        font-size: .7rem;
+                        font-weight: 400;
+                        color: $TextColor1;
+                    }
+                }
+            }
+        }
+    }
+}

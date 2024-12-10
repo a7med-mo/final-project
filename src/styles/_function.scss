@@ -6,11 +6,3 @@
     align-items: $align;
     gap: $gap;
 }
-
-@mixin image($url, $fit, $position) {
-    background: linear-gradient(to right, #000000b4 0%, #000000b4 100%),
-        url($url) 100% / $fit no-repeat;
-    object-position: $position;
-    background-attachment: fixed;
-}
-

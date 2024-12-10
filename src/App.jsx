@@ -6,6 +6,7 @@ import { CartContext } from "./components/Store/CartContext";
 import { WishlistContext } from "./components/WishlistContaxt/WishlistContaxt";
 import { Toaster } from "react-hot-toast";
 
+
 export default function App() {
   const queryClient = new QueryClient();
 
@@ -30,7 +31,7 @@ export default function App() {
       <Toaster
         position="top-left"
         toastOptions={{
-          duration: 3000,  // مدة ظهور الإشعار
+          duration: 3000,
           style: { fontSize: "14px" },
         }}
       />

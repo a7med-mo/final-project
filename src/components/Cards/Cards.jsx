@@ -8,10 +8,10 @@ export default function Cards() {
 
     const { data } = useQuery(
         {
-            queryKey: ['product'],
+            queryKey: ['cardsProducts'],
             queryFn: () => axiosConfig({
                 method: 'get',
-                url: `/products?limit=5`
+                url: `/products?limit=15`
             })
         }
     )

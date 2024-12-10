@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 
 
 // eslint-disable-next-line react/prop-types
-export default function Dropdown({propContent, title}) {
+export default function Dropdown({propContent, title, icon}) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null); 
 
@@ -24,6 +24,7 @@ export default function Dropdown({propContent, title}) {
     return (
         <div className="dropdown px">
             <button className="dropbtn" onClick={toggleDropdown}>
+                {icon}
                 {title}
             </button>
             <div className="dropdown-content" ref={contentRef}>

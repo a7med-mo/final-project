@@ -9,8 +9,7 @@ import CustomOffcanvas from "../../CustomOffcanvas/CustomOffcanvas";
 import { useQuery } from "@tanstack/react-query";
 import { axiosConfig } from "../../../utils/axiosConfig";
 
-
-export default function NavBar() {
+export default function HeaderMobile() {
     const cart = useContext(CartContext);
     const { wishlist } = useContext(WishlistContext) || { wishlist: [] };
 
@@ -27,10 +26,9 @@ export default function NavBar() {
             })
         }
     )
-
     return (
         <>
-            <nav className="navbar">
+            <nav className="navbar-mobile">
                 <ul className="navbar-nav">
                     <li>
                         <Link to={"/shopCart"} title="Cart">
@@ -38,7 +36,7 @@ export default function NavBar() {
                             <span>{cart.cartItems?.reduce((total, item) => total + item.quantity, 0) || 0}</span>
                         </Link>
                     </li>
-                    <li className="none">
+                    <li>
                         <Link to={"/wishlist"} title="Wishlist">
                             <CiHeart className="icon" />
                             <span>{wishlist?.length || 0}</span>
@@ -48,12 +46,12 @@ export default function NavBar() {
                         <CiSearch className="icon" title="Search" onClick={handleShow} />
                     </li>
                     <CustomOffcanvas show={show} onClose={handleClose} products={data?.data} />
-                    <li className="none">
+                    <li>
                         <Link to={"/shop"} title="Products">
                             <AiOutlineProduct className="icon" />
                         </Link>
                     </li>
-                    <li className="none">
+                    <li>
                         <Link to={"/login"} title="User">
                             <CiLogin className="icon" />
                         </Link>
@@ -61,5 +59,5 @@ export default function NavBar() {
                 </ul>
             </nav>
         </>
-    );
+    )
 }

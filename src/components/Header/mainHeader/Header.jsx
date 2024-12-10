@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Logo from "../logo/Logo";
 import NavBar from "../navBar/NavBar";
+import HeaderMobile from "../HeaderMobile/HeaderMobile";
 
 export default function Header() {
     const [isFixed, setIsFixed] = useState(false);
@@ -28,10 +29,14 @@ export default function Header() {
 
     
     return (
+        <>
+        
         <header className={`header px ${isFixed ? 'fixed' : ''} ${isHidden ? 'hidden' : ''}`}>
             <Logo />
             <NavBar />
-        </header>
+            </header>
+            <HeaderMobile />
+        </>
     );
 }
 

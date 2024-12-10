@@ -10,8 +10,8 @@
     .btn-card {
         @include flex(column, center, center, 0.5rem);
         position: absolute;
-        top: .5rem;
-        right: .5rem;
+        top: .8rem;
+        right: .8rem;
         z-index: 2;
         opacity: 0;
         visibility: hidden;
@@ -19,12 +19,8 @@
 
         button {
             @include flex(row, center, center, 0);
-            padding: 0.3rem .3rem;
-            background: #fff;
-            border: none;
-            box-shadow: .1rem .1rem .01rem rgba(30, 30, 30, 0.115);
             cursor: pointer;
-            font-size: .9rem;
+            font-size: 1.25rem;
             color: $TextColor3;
             transition: 0.5s;
             
@@ -107,7 +103,7 @@
                 border: transparent solid 0.01rem;
 
 
-                button {
+                span {
                     background: #6c7152;
                     width: .85rem;
                     height: .85rem;
@@ -117,6 +113,10 @@
                 }
 
                 &:hover {
+                    border: #000000d7 solid 0.01rem;
+                }
+
+                &.active {
                     border: #000000d7 solid 0.01rem;
                 }
             }

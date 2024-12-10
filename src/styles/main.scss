@@ -2,6 +2,7 @@
 @import './reset.scss';
 @import './function.scss';
 @import './mediaQuery.scss';
+@import '../components/CardLoading/cardLoading';
 @import '../components/WrapperField/errorInput';
 @import '../components/HeaderSection/headerSection';
 @import '../components/Header/mainHeader/header';
@@ -46,6 +47,7 @@
 @import '../components/CartEmpty/cartEmpty';
 @import '../components/WishlistProducts/wishlistProducts';
 @import '../components/WishListEmpty/wishListEmpty';
+@import '../components/ShopEmpty/shopEmpty';
 @import '../components/EditCardShopCart/MainEditCardShopCart/editCardShopCart';
 @import '../components/EditCardShopCart/MainEditCardShopCart/editCardShopCart';
 @import '../components/EditCardShopCart/EditProductColor/editProductColor';
@@ -60,4 +62,7 @@
 @import '../components/CheckOutHeader/checkOutHeader';
 @import '../components/Payment/payment';
 @import '../components/InternationalShipping/internationalShipping';
+@import '../components/CustomOffcanvas/customOffcanvas';
+@import '../components/LogInForm/logInForm';
+@import '../components/RegisterForm/registerForm';
 

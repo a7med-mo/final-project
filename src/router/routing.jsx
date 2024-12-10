@@ -7,6 +7,10 @@ import SingleShop from "../pages/singleShop/SingleShop";
 import ShopCart from "../pages/ShopCart/ShopCart";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import CheckOut from "../pages/checkOut/CheckOut";
+import Search from "../pages/search/Search";
+import LogIn from "../pages/login/LogIn";
+import Register from "../pages/register/register";
+
 
 
 export const routes = createBrowserRouter([
@@ -14,11 +18,22 @@ export const routes = createBrowserRouter([
     {
         path: "/",
         element: <Layout />,
-        errorElement: <Error />,
         children: [
             {
                 index: true,
                 element: <Home />,
+            },
+            {
+                path: "*",
+                element: <Error />,
+            },
+            {
+                path: "login",
+                element: <LogIn />,
+            },
+            {
+                path: "register",
+                element: <Register />,
             },
             {
                 path: "shop",
@@ -39,6 +54,10 @@ export const routes = createBrowserRouter([
             {
                 path: "checkout",
                 element: <CheckOut />,
+            },
+            {
+                path: "/search",
+                element: <Search />,
             }
         ],
     },
