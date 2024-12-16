@@ -54,7 +54,7 @@
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
-        max-height: 31.25rem;
+        max-height: fit-content;
         padding-block: 1.5rem;
     }
 
@@ -168,12 +168,13 @@
             }
         }
 
-        .MuiSlider-valueLabel{
+        .MuiSlider-valueLabel {
             height: fit-content !important;
             width: fit-content !important;
             background: $mainColorHover !important;
             padding-block: .2rem .5rem !important;
-            span{
+
+            span {
 
                 height: .5rem !important;
                 padding: 0 !important;
@@ -181,20 +182,81 @@
             }
         }
 
-        .price-range{
+        .price-range {
             @include flex(row, flex-start, center, .3rem);
             width: 100%;
             color: $TextColor2;
             font-size: .7rem;
 
-            span{
+            span {
                 font-weight: 500;
                 color: $TextColor1;
             }
         }
 
-        button{
+        button {
             padding: .5rem 1rem;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .filter-shop {
+        .filter-icon {
+            font-size: 1.6rem;
+
+            svg {
+                font-size: 2.1rem;
+            }
+        }
+    }
+
+    .filterContainer {
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .color-box,
+        .size-box,
+        .brand-box,
+        .type-box,
+        .price-box {
+            width: 40%;
+            margin-block: .5rem;
+            ul {
+                height: 18vh;
+
+                li {
+                    padding-block: .7rem;
+
+                    h3 {
+                        font-size: 1.15rem;
+                    }
+
+                    .color-swatch {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .price-box {
+            width: 100%;
+            padding: 1rem 2rem;
+
+            .price-range {
+                font-size: 1.4rem;
+                padding-block: .5rem;
+            }
+
+            button {
+                padding: .8rem 3rem;
+                font-size: .9rem;
+            }
         }
     }
 }

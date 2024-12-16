@@ -70,3 +70,62 @@
         }
     }
 }
+
+
+@media (max-width: 767px) {
+    .section-full-reviews {
+        @include flex(column, center, center, 3rem);
+
+        .box-full-reviews {
+            @include flex(column, center, center, .6rem);
+
+            h2 {
+                font-size: 5.25rem;
+            }
+
+            .star-wrapper {
+                font-size: 2.75rem;
+                width: 3.5rem;
+                height: 2.5rem;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+        }
+
+        .box-bars {
+            width: 100%;
+
+            .box-rating-bar {
+                @include flex(row, center, center, 1rem);
+
+                .box-rating {
+                    font-size: 1.2rem;
+
+                    .star-wrapper { 
+                        font-size: 1.5rem;
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+
+                .bar {
+                    width: 60%;
+                    height: .65rem;
+                    border-radius: .3rem;
+
+                    .bar-fill {
+                        border-radius: .3rem;
+                    }
+                }
+
+                .box-number-reviews {
+                    font-size: 1.2rem;
+                    border-radius: .3rem;
+                }
+            }
+        }
+
+    }
+}

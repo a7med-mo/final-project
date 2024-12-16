@@ -35,7 +35,7 @@ export default function CardsShopCart({ product }) {
                             <tr>
                                 <th className="th-product">Product</th>
                                 <th>Price</th>
-                                <th>Quantity</th>
+                                <th className="th-quantity">Quantity</th>
                                 <th className="th-total">Total</th>
                             </tr>
                         </thead>

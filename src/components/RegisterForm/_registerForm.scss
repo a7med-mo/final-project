@@ -27,6 +27,7 @@
         .wrapperField-input {
             width: 75%;
             position: relative;
+
             input {
                 width: 100%;
                 padding-block: .8rem;
@@ -36,9 +37,18 @@
                 font-weight: 400;
                 color: $TextColor1;
                 background: #fff;
+                transition: .3s;
+
+                &:focus {
+                    border: 1px solid $TextColor1;
+                }
+
+                &:hover {
+                    border: 1px solid $TextColor2;
+                }
             }
 
-            svg{
+            svg {
                 position: absolute;
                 top: 33%;
                 right: .7rem;
@@ -52,6 +62,11 @@
             width: 75%;
             padding-block: .85rem;
             margin-top: .5rem;
+
+            .disabled {
+                cursor: not-allowed;
+                opacity: .5;
+            }
         }
 
         p {
@@ -71,6 +86,39 @@
                     text-decoration: underline;
                     color: $mainColorHover;
                 }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .box-login {
+        form {
+            width: 85%;
+
+            h2 {
+                font-size: 2rem;
+                margin-block: 2rem;
+            }
+
+            .wrapperField-input {
+                input {
+                    padding-block: 1rem;
+                    padding-inline: 1rem;
+                    font-size: 1.15rem;
+                }
+            }
+
+            button {
+                padding-block: 1rem;
+                font-size: 1.15rem;
+            }
+
+            p {
+                font-size: 1.15rem;
+                padding-block: 1rem;
             }
         }
     }

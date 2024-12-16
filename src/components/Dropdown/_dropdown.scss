@@ -3,7 +3,9 @@
     margin-block: .5rem;
 
     .dropbtn {
+        @include flex(row, space-between, center, 0);
         font-size: .7rem;
+        font-weight: 400;
         text-align: start;
         text-transform: uppercase;
         width: 100%;
@@ -11,6 +13,21 @@
         padding: 0.75rem 1rem;
         cursor: pointer;
         background-color: #fff;
+        transition: .3s;
+
+        svg {
+            font-size: 1rem;
+            color: $TextColor2;
+            transition: .3s;
+        }
+
+        &:hover {
+            color: $mainColor;
+            background: $TextColor5;
+            svg {
+                color: $mainColor;
+            }
+        }
     }
 
     .dropdown-content {
@@ -19,11 +36,11 @@
         overflow: hidden;
         border: 0.01rem solid #0000001c;
         border-top: none;
-        visibility: hidden; 
+        visibility: hidden;
         transition: max-height 0.3s ease, visibility 0.3s ease;
-        padding: 0; 
+        padding: 0;
 
-        a{
+        a {
             display: block;
             padding: 0.75rem 1rem;
             text-decoration: none;
@@ -32,8 +49,8 @@
         }
 
         &.active {
-            visibility: visible; 
-            padding: 0.75rem 1rem; 
+            visibility: visible;
+            padding: 0.75rem 1rem;
         }
     }
 }

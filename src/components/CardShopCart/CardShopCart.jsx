@@ -73,10 +73,12 @@ export default function CardShopCart({ index, item, deleteItem, editItem, produc
                         </div>
                     </div>
                 </td>
+
                 <td className="td-price">
                     <span>${item?.price}</span>
                 </td>
-                <td>
+
+                <td className="td-quantity">
                         <div className="box-stock">
                             <button className="minus reset-btn" onClick={() => handleCount('minus')}>
                                 {item?.quantity === 1 ? <RiDeleteBinLine /> : <FiMinus />}
@@ -85,6 +87,7 @@ export default function CardShopCart({ index, item, deleteItem, editItem, produc
                             <button className="plus reset-btn" onClick={() => handleCount('plus')}><GoPlus /></button>
                         </div>
                 </td>
+                
                 <td className="td-total">
                     <span>${item?.price * count}</span>
                 </td>

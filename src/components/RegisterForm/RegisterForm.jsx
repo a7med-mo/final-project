@@ -1,9 +1,15 @@
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import WrapperField from "../WrapperField/WrapperField";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "../../utils/supabaseClient";
+import { ShowToastSuccess } from "../ShowToastSuccess/ShowToastSuccess";
+import bcrypt from "bcryptjs";
+import { ShowToastError } from "../ShowToastError/ShowToastError ";
 
 export default function RegisterForm() {
+    const navigate = useNavigate();
+
     const initialValues = {
         firstName: "",
         lastName: "",
@@ -32,8 +38,53 @@ export default function RegisterForm() {
             .required("Confirm Password is required"),
     });
 
-    const onSubmit = (values) => {
-        console.log("Form Values:", values);
+    const onSubmit = async (values, { setSubmitting, resetForm }) => {
+        try {
+            const { data: existingUser, error: fetchError } = await supabase
+                .from("users")
+                .select("*")
+                .eq("email", values.email)
+                .single();
+
+            if (existingUser) {
+                ShowToastError({ message: "Email already in use. Please log in." });
+                setSubmitting(false);
+                return;
+            }
+
+            const hashedPassword = await bcrypt.hash(values.password, 10);
+
+            const { error: insertError } = await supabase.from("users").insert([{
+                first_name: values.firstName,
+                last_name: values.lastName,
+                email: values.email,
+                password: hashedPassword,
+            }]);
+
+            if (insertError) {
+                ShowToastError({ message: "Registration failed. Please try again." });
+                setSubmitting(false);
+                return;
+            }
+
+            const { error: emailError } = await supabase.auth.api
+                .sendMagicLinkEmail(values.email);
+
+            if (emailError) {
+                ShowToastError({ message: "Error sending verification link. Please try again." });
+                setSubmitting(false);
+                return;
+            }
+
+            ShowToastSuccess({ message: "Registration successful! Please check your email to verify your account." });
+            resetForm();
+            navigate("/login");
+        } catch (error) {
+            console.error("Registration error:", error);
+            ShowToastError({ message: "An unexpected error occurred. Please try again." });
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     return (
@@ -46,6 +97,7 @@ export default function RegisterForm() {
                 {({ errors, touched, isSubmitting }) => (
                     <Form>
                         <h2>Register</h2>
+
                         <WrapperField
                             name="firstName"
                             title="First Name"
@@ -79,13 +131,15 @@ export default function RegisterForm() {
                             error={errors.confirmPassword}
                             touched={touched.confirmPassword}
                         />
+
                         <button
-                            className="btn"
+                            className={`btn ${isSubmitting ? "disabled" : ""}`}
                             type="submit"
                             disabled={isSubmitting}
                         >
-                            Register
+                            {isSubmitting ? "Registering..." : "Register"}
                         </button>
+
                         <p>
                             Already have an account? <Link to="/login">Log In</Link>
                         </p>

@@ -39,17 +39,17 @@ nav {
         ul {
             li,a {
                 svg {
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                 }
                 span {
                     @include flex(row, center, center, 0);
                     position: absolute;
                     top: -.15rem;
                     right: -.3rem;
-                    font-size: .75rem;
+                    font-size: .9rem;
                     color: #fff;
                     background: $mainColor;
-                    padding: 0.25rem 0.3rem;
+                    padding: 0.35rem 0.45rem;
                     border-radius: 40%;
                 }
 

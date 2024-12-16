@@ -28,3 +28,15 @@
         color: $mainColor;
     }
 }
+
+@media (max-width: 767px) {
+    .box-stock-popap {
+        button {
+            font-size: 1.5rem;
+        }
+
+        .count {
+            font-size: 1.5rem;
+        }
+    }
+}

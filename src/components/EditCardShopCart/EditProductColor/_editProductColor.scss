@@ -49,3 +49,21 @@
         }
     }
 }
+
+
+@media (max-width: 767px) {
+    .edit-popap-color {
+
+        h4 {
+            font-size: 1.1rem;
+        }
+
+        li {
+            padding: .3rem;
+            span {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+    }
+}

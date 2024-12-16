@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
+import { FiMinus } from "react-icons/fi";
+import { GoPlus } from "react-icons/go";
 
 
 // eslint-disable-next-line react/prop-types
-export default function Dropdown({propContent, title, icon}) {
+export default function Dropdown({propContent, title}) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null); 
 
@@ -24,8 +26,15 @@ export default function Dropdown({propContent, title, icon}) {
     return (
         <div className="dropdown px">
             <button className="dropbtn" onClick={toggleDropdown}>
-                {icon}
                 {title}
+
+                {
+                    isOpen ? (
+                        <FiMinus />
+                    ) : (
+                        <GoPlus />
+                    )
+                }
             </button>
             <div className="dropdown-content" ref={contentRef}>
                 {propContent}

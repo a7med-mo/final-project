@@ -57,5 +57,39 @@
             cursor: pointer;
         }
     }
+}
 
+@media (max-width: 767px) {
+    .box-confirm-order {
+
+        gap: 1rem;
+        order: 1;
+
+        h4{
+            width: 90%;
+            font-size: 1.15rem;
+        }
+        
+        .section-checkBox {
+            label {
+                font-size: 1rem;
+            }
+
+            .checkbox {
+                width: 1.2rem;
+                height: 1.2rem;
+
+                svg {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        a {
+            width: 60%;        
+            font-size: 1.1rem;
+            padding-block: 1rem;
+        }
+
+    }
 }

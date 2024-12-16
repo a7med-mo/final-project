@@ -37,6 +37,14 @@
                 font-weight: 400;
                 color: $TextColor1;
                 background: #fff;
+
+                &:focus {
+                    border: 1px solid $TextColor1;
+                }
+
+                &:hover {
+                    border: 1px solid $TextColor2;
+                }
             }
 
             svg {

@@ -27,3 +27,17 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .header-shop-cart{
+        margin-top: 6rem;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        a{
+            font-size: 1.4rem;
+        }
+    }
+}

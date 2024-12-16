@@ -42,3 +42,31 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .footer-contact {
+        width: 100%;
+
+        .footer-logo{
+            margin-bottom: 1.5rem;
+            img{
+                width: 10rem;
+            }
+        }
+
+        p{
+            font-size: 1.2rem;
+            margin-block: .8rem;
+        }
+
+        ul{
+            @include flex(row, flex-start, center, 2rem);
+            margin-block: 1.5rem 2rem;
+            li{
+                a{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

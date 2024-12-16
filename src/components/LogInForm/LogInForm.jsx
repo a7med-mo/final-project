@@ -1,9 +1,17 @@
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import WrapperField from "../WrapperField/WrapperField";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { supabase } from "../../utils/supabaseClient";
+import { ShowToastSuccess } from "../ShowToastSuccess/ShowToastSuccess";
+import { useState } from "react";
+import { ShowToastError } from "../ShowToastError/ShowToastError ";
 
 export default function LogInForm() {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [userData, setUserData] = useState(null);
+
     const initialValues = {
         email: "",
         password: "",
@@ -17,10 +25,53 @@ export default function LogInForm() {
             .min(6, "Password must be at least 6 characters")
             .required("Password is required"),
     });
+    const onSubmit = async (values, { setSubmitting }) => {
+        try {
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: values.email,
+                password: values.password,
+            });
 
-    const onSubmit = (values) => {
-        console.log("Form Values:", values);
+            if (error) {
+                ShowToastError({ message: error.message || "Invalid email or password." });
+                setSubmitting(false);
+                return;
+            }
+
+            const { data: userData, error: fetchError } = await supabase
+                .from("users")
+                .select("*")
+                .eq("email", values.email)
+                .single();
+
+            if (fetchError || !userData) {
+                ShowToastError({ message: "Unable to fetch user data. Please try again." });
+                setSubmitting(false);
+                return;
+            }
+
+            if (!userData.email_confirmed_at) {
+                ShowToastError({
+                    message: "Please verify your email address before logging in.",
+                });
+                setSubmitting(false);
+                return;
+            }
+
+            setUserData(userData);
+
+            ShowToastSuccess({ message: `Login successful! Welcome, ${userData.first_name}` });
+
+            const redirectTo = location.state?.from || "/";
+            navigate(redirectTo);
+        } catch (error) {
+            console.error("Login error:", error);
+            ShowToastError({ message: "An unexpected error occurred. Please try again." });
+        } finally {
+            setSubmitting(false);
+        }
     };
+
 
     return (
         <div className="box-login">
@@ -39,7 +90,6 @@ export default function LogInForm() {
                             error={errors.email}
                             touched={touched.email}
                         />
-
                         <WrapperField
                             name="password"
                             title="Your Password"
@@ -47,21 +97,26 @@ export default function LogInForm() {
                             error={errors.password}
                             touched={touched.password}
                         />
-
                         <button
                             className="btn"
                             type="submit"
                             disabled={isSubmitting}
                         >
-                            Login
+                            {isSubmitting ? <span>Loading...</span> : "Login"}
                         </button>
-
                         <p>
-                            Don&apos;t have an account? <Link to="/register">Sign Up</Link>
+                            Don&apos;t have an account?{" "}
+                            <Link to="/register">Sign Up</Link>
                         </p>
                     </Form>
                 )}
             </Formik>
+
+            {userData && (
+                <div>
+                    <h3>Welcome, {userData.first_name}!</h3>
+                </div>
+            )}
         </div>
     );
 }

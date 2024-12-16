@@ -6,12 +6,14 @@ export default function Layout() {
     
     const location = useLocation();
     const isCheckoutPage = location.pathname === "/checkout";
+    const isLogInPage = location.pathname === "/login";
+    const isRegisterPage = location.pathname === "/register";
 
     return (
         <>
             {!isCheckoutPage && <Header />}
             <Outlet />
-            {!isCheckoutPage && <MainFooter />}
+            {!isCheckoutPage && !isLogInPage && !isRegisterPage && <MainFooter />}
         </>
     );
 }

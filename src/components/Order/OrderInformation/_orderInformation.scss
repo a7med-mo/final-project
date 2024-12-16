@@ -69,3 +69,46 @@
     }
 
 }
+
+@media (max-width: 767px) {
+    .box-order-information {
+        @include flex(column, center, flex-start, 1rem);
+        width: 100%;
+        margin-block: 2rem;
+
+        h4 {
+            font-size: 1.2rem;
+            text-transform: capitalize;
+
+            span {  
+                font-size: 1.25rem;
+            }
+        }
+
+        h5 {
+            font-size: 1.3rem;
+            text-transform: capitalize;
+        }
+
+        .bar-free-order {
+            width: 100%;
+
+            .bar {
+                height: .8rem;
+                .progress-bar {
+
+
+
+                    span {
+                        width: 1.8rem;
+                        height: 1.4rem;
+
+                        svg {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

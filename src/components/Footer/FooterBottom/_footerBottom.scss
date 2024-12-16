@@ -26,3 +26,25 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .bottom-footer{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-block: 2rem;
+        margin-bottom: 5rem;
+        
+        p{
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        ul{
+            li{
+                a{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}

@@ -53,3 +53,23 @@
     @include flex(row, center, center, 0);
     margin-block: 2rem;
 }
+
+@media (max-width: 767px) {
+
+    .pagination-page{
+
+        ul{
+            li{
+                span{
+                    width: 3rem;
+                    height: 3rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        svg{
+            font-size: 3rem;
+        }
+    }
+}

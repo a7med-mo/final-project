@@ -15,3 +15,17 @@
         @include flex(row, space-between, center, 2rem);
     }
 }
+
+@media (max-width: 767px) {
+    .get-in-touch{
+        h2{
+            display: none;
+        }
+
+        p{
+            font-size: 1.2rem;
+            padding-block: .6rem;
+            border-bottom: 1px solid #0000001a;
+        }
+    }
+}

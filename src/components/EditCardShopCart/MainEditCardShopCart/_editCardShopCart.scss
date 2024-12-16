@@ -71,3 +71,33 @@
     }
 
 }
+
+@media (max-width: 767px) {
+    .edit-popap {
+        .box-popap-edit {
+            width: 70%;
+            padding: 2rem 1rem;
+
+            .close-popap {
+                font-size: 2rem;
+            }
+
+            .edit-popap-product {              
+                .box-image {
+                    width: 27%;
+                }
+
+                .box-content {
+                    h2 {
+                        font-size: 1.25rem;
+                    }
+
+                    h4 {
+                        font-size: 1.15rem;
+                    }
+                }
+            }
+        }
+
+    }
+}

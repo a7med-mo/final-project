@@ -30,3 +30,28 @@
 
 
 }
+
+@media (max-width: 767px) {
+    .section-shop-empty {
+        margin-block: 8rem;
+
+        .icon {
+            font-size: 7rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        a {
+            font-size: 1rem;
+            padding: 1rem 2rem;
+        }
+
+        p {
+            width: 80%;
+            line-height: 1.7rem;
+            font-size: 1rem;
+        }
+    }
+}

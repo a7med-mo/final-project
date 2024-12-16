@@ -65,7 +65,7 @@ export default function AddComment({ refetchReviews, product }) {
 
     return (
         <>
-            <button className="btn-review reset-btn" onClick={handleOpen}>
+            <button className="btn-review" onClick={handleOpen}>
                 Write a Review
             </button>
 

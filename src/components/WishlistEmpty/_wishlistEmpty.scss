@@ -27,6 +27,28 @@
         font-weight: 400;
         color: $TextColor1;
     }
+}
 
+@media (max-width: 767px) {
+    .section-wishlist-empty{
+        margin-block: 4rem;
+        .icon{
+            font-size: 8rem;
+        }
 
+        h2{
+            font-size: 1.8rem;
+        }
+
+        a{    
+            font-size: 1rem;
+            padding: 1rem 2rem;
+        }
+
+        p{
+            width: 90%;
+            line-height: 1.7rem;
+            font-size: 1rem;
+        }
+    }
 }

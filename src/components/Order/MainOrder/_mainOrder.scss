@@ -3,3 +3,9 @@
     @include flex(row, space-between, flex-start, 0);
     margin-block: 2rem;
 }
+
+@media (max-width: 767px) {
+    .section-main-order{
+        @include flex(column, center, flex-start, 0);
+    }
+}

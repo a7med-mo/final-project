@@ -1,0 +1,67 @@
+.box-user {
+    @include flex(column, center, center, 1rem);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: $TextColor5;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 2.5rem;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+
+    &.active {
+        top: 3.5rem;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    button {
+        @include flex(row, center, center, .5rem);
+        width: 4rem;
+        padding: .6rem 1rem;
+        background: $TextColor4;
+        overflow: hidden;
+        cursor: pointer;
+        transition: .3s;
+
+        .box-icon {
+            @include flex(row, center, center, .5rem);
+            overflow: hidden;
+            
+            svg {
+                font-size: 1.05rem;
+                color: $TextColor1;
+                background-color: $TextColor4;
+                z-index: 1;
+                transition: .3s;
+            }
+
+            h5 {
+                width: 0;
+                font-size: .9rem;
+                font-weight: 600;
+                color: $TextColor1;
+                transform: translateX(-200%);
+                transition: width .2s, transform .4s;
+            }
+        }
+
+        &:hover {
+            width: 8rem;
+            background: red;
+
+            svg {
+                color: #fff;
+                background-color: red;
+            }
+            h5 {
+                width: 68%;
+                transform: translateX(0);
+                color: #fff;
+            }
+        }
+    }
+
+}

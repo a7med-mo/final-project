@@ -15,7 +15,6 @@
                 font-weight: 400;
                 color: $TextColor1;
                 text-transform: capitalize;
-                text-decoration: none;
                 transition: 0.3s;
 
                 &:hover{
@@ -23,5 +22,21 @@
                 }
             }
         }    
+    }
+}
+
+@media (max-width: 767px) {
+    .useful-links{
+        h2{
+            display: none;
+        }
+
+        ul{
+            li{
+                a{
+                    font-size: 1.2rem;
+                }
+            }
+        }
     }
 }

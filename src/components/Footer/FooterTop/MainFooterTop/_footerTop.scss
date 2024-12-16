@@ -1,7 +1,45 @@
 .footer-top{
     width: 100%;
-    background: $TextColor4;
+    background: $TextColor5;
     padding-block: 3.5rem;
     border: 1px solid #0000001a;
     @include flex(row, space-between, flex-start, 0);
+}
+
+.footer-top-mobile{
+    display: none;
+    background: $TextColor5;
+    border: 1px solid #0000001a;
+    padding-block: 4rem;
+    .dropdown{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-block: .75rem;
+
+        .dropbtn{
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-align: start;
+            text-transform: capitalize;
+            padding: 1.2rem 0;
+            border: none;
+            background-color: transparent;
+
+            svg{
+                font-size: 2rem;
+            }
+        }
+
+        .dropdown-content{
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-top-mobile{display: block;}
+    .footer-top{display: none;}
 }

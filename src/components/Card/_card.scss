@@ -30,7 +30,6 @@
 
             &:hover {
                 color: $mainColorHover;
-                background: $TextColor5;
             }
         }
     }
@@ -176,7 +175,6 @@
             button {
                 @include flex(row, center, center, 0);
                 padding: 0.5rem .5rem;
-                box-shadow: .1rem .1rem .012rem rgba(30, 30, 30, 0.115);
                 font-size: 1.1rem;
             }
         }
@@ -223,7 +221,7 @@
 
         .btn-card {
             button {
-                font-size: 1.75rem;
+                font-size: 2.2rem;
             }
         }
 

@@ -157,3 +157,81 @@
         }
     }
 }
+
+
+@media (max-width: 767px) {
+    .section-card-shop-cart {
+        table {
+            thead {
+                tr {
+                    .th-product {
+                        width: 60%;
+                        text-align: start;
+                    }
+
+                    th {
+                        font-size: 1.1rem;
+
+                        &.th-quantity {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+
+                    .td-quantity {
+                        display: none;
+                        visibility: hidden;
+                    }
+
+                    .td-product {
+                        width: 65%;
+                        text-align: start;
+
+                        .box-product {
+
+                            img {
+                                width: 8rem;
+                                height: 11rem;
+                            }
+
+                            .box-content-product {
+                                a {
+                                    font-size: 1.2rem;
+                                }
+
+                                p {
+                                    font-size: 1.1rem;
+                                }
+
+                                .icons {
+                                    span {
+                                        &.icon {
+                                            font-size: 1.6rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .td-price {
+                        span {
+                            font-size: 1.3rem !important;
+                        }
+                    }
+
+                    .td-total {
+                        span {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

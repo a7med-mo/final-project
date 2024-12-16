@@ -1,36 +1,62 @@
-.section-cart-empty{
+.section-cart-empty {
     width: 100%;
     @include flex(column, center, center, 1.3rem);
     text-align: center;
     margin-block: 5rem;
 
-    .icon{
+    .icon {
         font-size: 5.5rem;
         color: $TextColor1;
     }
 
-    h2{
+    h2 {
         font-size: 1.1rem;
         font-weight: 500;
         text-transform: uppercase;
         color: $TextColor1;
     }
 
-    a{
+    a {
         font-size: .55rem;
     }
 
-    p{
+    p {
         width: 50%;
         font-size: .65rem;
         line-height: 1rem;
         font-weight: 400;
         color: $TextColor1;
 
-        strong{
+        strong {
             color: $mainColor;
         }
     }
 
 
+}
+
+
+@media (max-width: 767px) {
+    .section-cart-empty {
+        margin-block: 8rem;
+
+        .icon {
+            font-size: 8rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        a {
+            font-size: 1rem;
+            padding: 1rem 2rem;
+        }
+
+        p {
+            width: 90%;
+            line-height: 1.7rem;
+            font-size: 1.1rem;
+        }
+    }
 }

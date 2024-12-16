@@ -1,5 +1,5 @@
 .btn-review {
-    @include flex(row, flex-end, center, 0);
+    @include flex(row, center, center, 0);
     padding: 0.6rem 1rem;
     margin-bottom: 1.5rem;
     background: $star-filled-color;
@@ -129,7 +129,7 @@
         }
 
         button {
-            @include flex(row, flex-end, center, 0);
+            @include flex(row, center, center, 0);
             padding: 0.6rem 1rem;
             margin-bottom: 1.5rem;
             background: $star-filled-color;
@@ -142,6 +142,65 @@
 
             &:hover {
                 background: $star-hover-color;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .btn-review{
+        width: 50%;
+        font-size: 1.3rem;
+        padding: .8rem;
+        margin: auto;
+    }
+
+    .add-comment {
+        .add-comment-form {
+            width: 80%;
+
+            .close {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .box-rate {
+                font-size: 1.3rem;
+
+                .star {
+                    font-size: 2rem;
+                }
+            }
+
+            .wrapperField-input {
+                input {
+                    font-size: 1.1rem;
+                    padding-block: .75rem;
+                    &::placeholder {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            textarea {
+                font-size: 1.1rem;
+                &::placeholder {
+                    font-size: 1rem;
+                }
+            }
+
+            button {
+                width: 50%;
+                font-size: 1.1rem;
+                padding: .8rem;
+                margin: auto;
+                margin-block: 1rem;
             }
         }
     }

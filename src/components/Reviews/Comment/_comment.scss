@@ -55,3 +55,50 @@
         color: $TextColor1;
     }
 }
+
+@media (max-width: 767px) {
+    .comment {
+        gap: 1rem;
+        .user-comment {
+            padding-block: .4rem;
+            padding-inline: .4rem 1rem;
+
+            .user-avatar {
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+        }
+
+        .box-rating-time {
+            .star-rating {
+                .star {
+                    font-size: 1.6rem;
+                }
+
+                .star-wrapper {
+                    width: 1.6rem;
+                    height: 1.5rem;
+                }
+            }
+
+            .date-time {
+                font-size: 1.1rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            width: 100%;
+            font-size: 1.1rem;
+            line-height: 1.75rem;
+        }
+    }
+}
