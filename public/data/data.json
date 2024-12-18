@@ -1,144 +1,66 @@
-{
-  "products": [
+[
     {
-      "id": "1",
-      "name": "Short Sleeve Dress",
-      "description": "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.",
-      "price": "24.00",
-      "category": "Fashion",
-      "brand": "BrandY",
-      "type": "girls",
-      "stock": 20,
-      "rating": 4.5,
-      "reviews": [
-        {
-          "user": "Sarah",
-          "title": "Great product!",
-          "comment": "Amazing quality and fits perfectly!",
-          "quality": 5,
-          "createdAt": "2024-12-03T15:33:37.508Z"
-        }
-      ],
-      "images": [
-        "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_4_1_360x.jpg?v=1609734033",
-        "https://elessi2.myshopify.com/cdn/shop/products/0519492505_1_1_1_360x.jpg?v=1609734011",
-        "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_1_1_360x.jpg?v=1609734015",
-        "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_3_1_360x.jpg?v=1609734018"
-      ],
-      "colors": [
-        {
-          "colorName": "Black",
-          "hexCode": "#000000",
-          "image": [
+        "id": 1,
+        "name": "Short Sleeve Dress",
+        "description": "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.",
+        "price": 24.00,
+        "category": "Fashion",
+        "brand": "BrandY",
+        "type": "girls",
+        "stock": 20,
+        "rating": 5.00,
+        "reviews": [
+            {
+                "user": "Sarah",
+                "title": "Great product!",
+                "comment": "Amazing quality and fits perfectly!",
+                "quality": 5,
+                "createdAt": "2024-12-03T15:33:37.508Z"
+            }
+        ],
+        "images": [
             "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_4_1_360x.jpg?v=1609734033",
-            "https://elessi2.myshopify.com/cdn/shop/products/0519492802_1_1_1_360x.jpg?v=1609734036",
-            "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_1_1_360x.jpg?v=1609734040",
-            "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_3_1_360x.jpg?v=1609734043"
-          ]
-        },
-        {
-          "colorName": "blue",
-          "hexCode": "#a8bcd4",
-          "image": [
-            "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_4_1.jpg?v=1609734022",
-            "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_3_1.jpg?v=1609734025",
-            "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_1_1.jpg?v=1609734029"
-          ]
-        },
-        {
-          "colorName": "olive green",
-          "hexCode": "#6c7152",
-          "image": [
-            "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_4_1_360x.jpg?v=1609734007",
             "https://elessi2.myshopify.com/cdn/shop/products/0519492505_1_1_1_360x.jpg?v=1609734011",
             "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_1_1_360x.jpg?v=1609734015",
             "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_3_1_360x.jpg?v=1609734018"
-          ]
-        }
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L"
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Hoodie For Men",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum aliquid at inventore, necessitatibus dicta, minus cupiditate dolore praesentium eum nisi ratione eveniet temporibus quia repellendus eos animi aperiam optio exercitationem?.",
-      "price": "88.00",
-      "category": "Fashion",
-      "brand": "BrandY",
-      "type": "men",
-      "stock": 10,
-      "rating": "4.3",
-      "reviews": [
-        {
-          "user": "Sarah",
-          "quality": 5,
-          "title": "Great product!",
-          "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum aliquid at inventore, necessitatibus dicta, minus cupiditate dolore praesentium eum nisi ratione eveniet temporibus quia repellendus eos animi aperiam optio exercitationem?",
-          "createdAt": "2024-11-03T15:33:37.508Z"
-        },
-        {
-          "user": "ahmed",
-          "quality": 5,
-          "title": "Great product!",
-          "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum aliquid at inventore, necessitatibus dicta, minus cupiditate dolore praesentium eum nisi ratione eveniet temporibus quia repellendus eos animi aperiam optio exercitationem?",
-          "createdAt": "2024-12-03T15:33:37.508Z"
-        },
-        {
-          "user": "ahmed",
-          "email": "hafacufic@mailinator.com",
-          "title": "Great product!",
-          "comment": "Amazing quality and fits perfectly!",
-          "quality": 3,
-          "createdAt": "2024-12-03T15:38:50.664Z"
-        }
-      ],
-      "images": [
-        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_4_1_360x.jpg?v=1609387090",
-        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_3_1_360x.jpg?v=1609387090",
-        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_1_1_360x.jpg?v=1609387090",
-        "https://elessi2.myshopify.com/cdn/shop/products/2141498300_1_1_1_360x.jpg?v=1609387090"
-      ],
-      "colors": [
-        {
-          "colorName": "Yellow",
-          "hexCode": "#f1bd1a",
-          "image": [
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_4_1_360x.jpg?v=1609387090",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_3_1_360x.jpg?v=1609387090",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_2_1_1_360x.jpg?v=1609387090",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498300_1_1_1_360x.jpg?v=1609387090"
-          ]
-        },
-        {
-          "colorName": "Blue",
-          "hexCode": "#a8bcd4",
-          "image": [
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_2_4_11_360x.jpg?v=1609387090",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_1_1_1_360x.jpg?v=1609387099",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_2_1_1_360x.jpg?v=1609387099",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498400_2_3_1_360x.jpg?v=1609387099"
-          ]
-        },
-        {
-          "colorName": "Pink",
-          "hexCode": "#fcc6de",
-          "image": [
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_2_4_11_360x.jpg?v=1609387099",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_1_1_1_360x.jpg?v=1609387099",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_2_1_1_360x.jpg?v=1609387099",
-            "https://elessi2.myshopify.com/cdn/shop/products/2141498902_2_3_1_360x.jpg?v=1609387676"
-          ]
-        }
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L"
-      ]
+        ],
+        "colors": [
+            {
+                "image": [
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_4_1_360x.jpg?v=1609734033",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492802_1_1_1_360x.jpg?v=1609734036",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_1_1_360x.jpg?v=1609734040",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492802_2_3_1_360x.jpg?v=1609734043"
+                ],
+                "hexCode": "#000000",
+                "colorName": "Black"
+            },
+            {
+                "image": [
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_4_1.jpg?v=1609734022",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_3_1.jpg?v=1609734025",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492402_2_1_1.jpg?v=1609734029"
+                ],
+                "hexCode": "#a8bcd4",
+                "colorName": "blue"
+            },
+            {
+                "image": [
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_4_1_360x.jpg?v=1609734007",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492505_1_1_1_360x.jpg?v=1609734011",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_1_1_360x.jpg?v=1609734015",
+                    "https://elessi2.myshopify.com/cdn/shop/products/0519492505_2_3_1_360x.jpg?v=1609734018"
+                ],
+                "hexCode": "#6c7152",
+                "colorName": "olive green"
+            }
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "discount": 10,
+        "remaining": 0
     }
-  ]
-}
+]

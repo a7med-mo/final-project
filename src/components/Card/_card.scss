@@ -1,11 +1,24 @@
 .box-card {
     @include flex(column, center, center, 1rem);
-    width: calc((100% / 5) - 1rem);
+    width: calc((100% / 4) - 1rem);
     margin-bottom: 1.5rem;
     position: relative;
     cursor: pointer;
     transition: .5s;
 
+    .discount{
+        font-size: .65rem;
+        color: #fff;
+        background: $mainColor;
+        padding: .2rem .55em;
+        position: absolute;
+        top: .7rem;
+        left: .7rem;
+        z-index: 2;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.5s;
+    }
 
     .btn-card {
         @include flex(column, center, center, 0.5rem);
@@ -20,7 +33,7 @@
         button {
             @include flex(row, center, center, 0);
             cursor: pointer;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: $TextColor3;
             transition: 0.5s;
             
@@ -36,7 +49,7 @@
 
     .box-image-card {
         width: 100%;
-        height: 35vh;
+        height: 16.5rem;
         overflow: hidden;
         position: relative;
 
@@ -52,7 +65,7 @@
             opacity: 1;
             visibility: visible;
             transition: .6s;
-            object-position: center;
+            position: absolute;
         }
 
         .hover-image-card{
@@ -74,9 +87,21 @@
         h3 {
             color: $TextColor1;
             text-transform: capitalize;
-            font-size: .9rem;
+            font-size: .95rem;
             font-weight: 500;
             transition: 0.5s;
+        }
+
+        .box-discount{
+            @include flex(row, flex-start, center, 0.5rem);
+
+            .price-discount{
+                color: #ff1111d7;
+                text-transform: capitalize;
+                font-size: .75rem;
+                font-weight: 500;
+                transition: 0.5s;
+            }
         }
 
         h4 {
@@ -122,8 +147,6 @@
 
         }
     }
-
-
 
     &:hover {
         .btn-card {

@@ -9,27 +9,33 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-
-import SlideBanner from '../SlideBanner/SlideBanner';
+import Post from '../Post/Post';
 import { useQuery } from '@tanstack/react-query';
 import { axiosConfig } from '../../../utils/axiosConfig';
 
 
-export default function Banner() {
+export default function Posts() {
+
 
     const { data } = useQuery(
         {
-            queryKey: ['cardsProducts'],
+            queryKey: ['posts'],
             queryFn: () => axiosConfig({
                 method: 'get',
-                url: `/slider_data?`
+                url: `/post_data?`
             })
         }
     )
 
+    console.log(data?.data);
+    
+
+
     return (
         <>
-            <div className="box-banner">
+            <div className="banner-posts">
+
+
                 <Swiper
                     autoplay={{
                         delay: 3500,
@@ -44,18 +50,13 @@ export default function Banner() {
                     modules={[Autoplay, EffectFade, Pagination]}
                     className="mySwiper"
                 >
-                    {data?.data?.map((item) => (
+
+                    {data?.data.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <SlideBanner
-                                key={item.id}
-                                img={item.img}
-                                title={item.title}
-                                subtitle={item.subtitle} />
+                            <Post item={item?.data} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
-
-
             </div>
         </>
     )

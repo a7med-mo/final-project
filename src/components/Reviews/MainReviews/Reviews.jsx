@@ -26,7 +26,7 @@ export default function Reviews() {
         return <div>Error fetching data</div>;
     }
 
-    if (!data || !data.data || data.data.length === 0) {
+    if (!data || !data.data || data?.data?.length === 0) {
         return <div>No reviews available</div>;
     }
 

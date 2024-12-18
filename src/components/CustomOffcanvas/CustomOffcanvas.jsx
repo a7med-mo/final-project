@@ -30,19 +30,23 @@ export default function CustomOffcanvas({ show, onClose, products }) {
     }, [show, onClose]);
 
     useEffect(() => {
-        const delayDebounceFn = setTimeout(() => {
-            if (searchQuery) {
+        if (searchQuery === "") {
+            setFilteredProducts([]);
+        } else {
+            const delayDebounceFn = setTimeout(() => {
                 const results = products.filter((product) =>
                     product.name.toLowerCase().includes(searchQuery.toLowerCase())
                 );
                 setFilteredProducts(results);
-            }
-        }, 300);
+            }, 300);
 
-        return () => clearTimeout(delayDebounceFn);
+            return () => clearTimeout(delayDebounceFn);
+        }
     }, [searchQuery, products]);
 
-
+    const handleProductClick = () => {
+        onClose();
+    };
 
     return (
         <div className={`box-shadow ${show ? "show" : ""}`}>
@@ -66,15 +70,31 @@ export default function CustomOffcanvas({ show, onClose, products }) {
                 </div>
 
                 <div className="box-cards">
-                    {filteredProducts?.length > 0 ? (
+                    {searchQuery === "" ? (
+                        <p className="no-products">No products found</p>
+                    ) : filteredProducts?.length > 0 ? (
                         filteredProducts?.map((product, index) => (
                             <div className="card" key={index}>
-                                <Link to={`/${product.id}/${product.name}`} className="box-image">
+                                <Link to={`/${product.id}/${product.name}`} className="box-image" onClick={handleProductClick}>
                                     <img src={product?.images[0]} alt={product?.name} />
                                 </Link>
-                                <Link to={`/${product.id}/${product.name}`} className="box-content">
+                                <Link to={`/${product.id}/${product.name}`} className="box-content" onClick={handleProductClick}>
                                     <h2>{product?.name}</h2>
-                                    <h4>${product?.price}</h4>
+                                    {
+                                        product.discount > 0 ?
+                                            <div className="box-discount">
+                                                <h4 className="price-discount">
+                                                    <del>${product?.price.toFixed(2)}</del>
+                                                </h4>
+                                                <h4>
+                                                    ${product?.price.toFixed(2) - (product.price * product.discount / 100)}
+                                                </h4>
+                                            </div>
+                                            :
+                                            <div>
+                                                <h4>${product?.price.toFixed(2)}</h4>
+                                            </div>
+                                    }
                                 </Link>
                             </div>
                         ))

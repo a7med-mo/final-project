@@ -62,7 +62,7 @@
             margin: auto;
             margin-block: 1rem;
             width: 90%;
-            height: 3.5rem;
+            height: 2.5rem;
             padding: .8rem;
             border: 1px solid #0000002a;
             position: relative;
@@ -153,6 +153,18 @@
                         font-weight: 400;
                         color: $TextColor1;
                     }
+
+                    .box-discount {
+                        @include flex(row, flex-start, center, 0.5rem);
+
+                        .price-discount {
+                            color: #ff1111d7;
+                            text-transform: capitalize;
+                            font-size: .65rem;
+                            font-weight: 500;
+                            transition: 0.5s;
+                        }
+                    }
                 }
             }
         }
@@ -191,7 +203,7 @@
                         width: 28%;
                         height: 7.5rem;
                     }
-                    
+
                     a.box-content {
                         h2 {
                             font-size: 1.3rem;
@@ -204,7 +216,7 @@
                 }
             }
 
-            
+
         }
     }
 }

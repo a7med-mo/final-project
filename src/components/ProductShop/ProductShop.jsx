@@ -6,12 +6,19 @@ import CardLoading from "../CardLoading/CardLoading";
 
 export default function ProductShop({ products, count, isLoading }) {
     const [page, setPage] = useState(0);
-    const limit = 25;
+    const limit = 16;
     const totalPages = Math.ceil(count / limit);
 
+    // ترتيب المنتجات حسب المبيعات (أو مقياس آخر مثل rating أو stock أو remaining)
+    const sortedProducts = useMemo(() => {
+        return products?.sort((a, b) => {
+            return b.sales - a.sales || b.rating - a.rating;
+        });
+    }, [products]);
+
     const currentProducts = useMemo(() => {
-        return products?.slice(page * limit, (page + 1) * limit);
-    }, [products, page, limit]);
+        return sortedProducts?.slice(page * limit, (page + 1) * limit);
+    }, [sortedProducts, page, limit]);
 
     const renderPagination = () => {
         const pages = [];

@@ -5,10 +5,11 @@ import Card from "../Card/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-export default function YouMayAlsoLike({ productId }) {
+export default function RecentlyViewedProducts({ productId }) {
+
     const { data, isLoading, isError, error } = useQuery(
         {
-            queryKey: ['YouMayAlsoLike'],
+            queryKey: ['RecentlyViewedProducts'],
             queryFn: () => axiosConfig({
                 method: 'get',
                 url: `/products?limit=12`
@@ -38,8 +39,8 @@ export default function YouMayAlsoLike({ productId }) {
 
     return (
         <>
-            <h2 className="title-You-May-Also-Like">You May Also Like</h2>
-            <div className="box-You-May-Also-Like">
+            <h2 className="title-Recently-Viewed-Products">Recently Viewed Products</h2>
+            <div className="box-Recently-Viewed-Products">
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={5}

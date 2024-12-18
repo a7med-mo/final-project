@@ -11,12 +11,9 @@ export default function CardsShopCart({ product }) {
     const cart = useContext(CartContext);
 
     const deleteItem = (cartId) => {
-
         console.log(cartId);
         let newItems = cart.cartItems.filter(i => i.cartId !== cartId);
         cart.setCartItems([...newItems]);
-
-
     };
 
     const editItem = (cartId, count) => {
@@ -55,8 +52,6 @@ export default function CardsShopCart({ product }) {
                     <MainOrder total={cart.cartItems.reduce((total, item) => total + item.price * item.quantity, 0)} />
                 </div>)
             }
-
-
         </>
     )
 };

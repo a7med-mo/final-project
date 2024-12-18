@@ -10,7 +10,8 @@
 @import '../components/Header/logo/logo';
 @import '../components/Banner/mainBanner/banner';
 @import '../components/Banner/SlideBanner/slideBanner';
-@import '../components/Posts/posts';
+@import '../components/Posts/MainPosts/posts';
+@import '../components/Posts/Post/post';
 @import '../components/TrendyItem/trendyItem';
 @import '../components/Card/card';
 @import '../components/CollectionSection/MainCollection/collectionSection';
@@ -67,3 +68,6 @@
 @import '../components/RegisterForm/registerForm';
 @import '../components/User/user';
 @import '../components/CardsShopCart/cardsShopCart';
+@import '../components/TableViewDetails/tableViewDetails';
+@import '../components/RecentlyViewedProducts/recentlyViewedProducts';
+@import '../components/LoadingSingleShop/loadingSingleShop';

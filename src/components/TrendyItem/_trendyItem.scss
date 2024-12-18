@@ -1,10 +1,28 @@
 .box-trendy-item {
     width: 100%;
-    @include flex(row, center, center, 1rem);
+    @include flex(row, center, flex-start, 1rem);
+
+    .box-card{
+        width: calc((100% / 5) - 1rem);
+
+        .box-image-card{
+            height: 13.5rem;
+        }
+
+        .box-content-card{
+            h3{
+                font-size: .85rem;
+            }
+
+            h4{
+                font-size: .75rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 1023px) {
     .box-trendy-item {
-        @include flex(row, center, center, 1rem);
+        @include flex(row, center, flex-start, 1rem);
     }
 }

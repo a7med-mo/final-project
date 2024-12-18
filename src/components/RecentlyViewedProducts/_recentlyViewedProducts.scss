@@ -1,4 +1,4 @@
-.box-You-May-Also-Like {
+.box-Recently-Viewed-Products {
     @include flex(row, center, center, 1rem);
     width: 100%;
     padding: 2rem 0;
@@ -18,7 +18,7 @@
     }
 }
 
-.title-You-May-Also-Like {
+.title-Recently-Viewed-Products {
     font-size: 1.5rem;
     text-transform: capitalize;
     font-weight: 700;

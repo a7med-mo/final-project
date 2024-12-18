@@ -2,8 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { axiosConfig } from "../../utils/axiosConfig";
 import Card from "../Card/Card";
 
-
-
 export default function Cards() {
 
     const { data } = useQuery(
@@ -11,11 +9,10 @@ export default function Cards() {
             queryKey: ['cardsProducts'],
             queryFn: () => axiosConfig({
                 method: 'get',
-                url: `/products?limit=15`
+                url: `/products?limit=12`
             })
         }
     )
-
 
     if (!Array.isArray(data?.data)) {
         return <p>No valid data available</p>;
@@ -30,3 +27,7 @@ export default function Cards() {
     )
 
 }
+
+
+
+

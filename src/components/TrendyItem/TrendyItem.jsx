@@ -6,7 +6,7 @@ import CardLoading from "../CardLoading/CardLoading";
 
 export default function TrendyItem() {
 
-    const { data, isLoading } = useQuery(
+    const { data, isLoading, isError, error } = useQuery(
         {
             queryKey: ['TrendyItem'],
             queryFn: () => axiosConfig({
@@ -14,20 +14,47 @@ export default function TrendyItem() {
                 url: `/products?limit=10`
             })
         }
-    )
+    );
+
+    if (isLoading) {
+        return (
+            <>
+                <HeaderSection title="Trendy Item" />
+                <div className="box-trendy-item px">
+                    {Array.from({ length: 10 }).map((_, index) => (
+                        <CardLoading key={index} />
+                    ))}
+                </div>
+            </>
+        );
+    }
+
+    if (isError) {
+        return (
+            <div>Error: {error.message}</div>
+        );
+    }
+
+    const sortedData = data?.data?.sort((a, b) => {
+        if (b.rating !== a.rating) {
+            return b.rating - a.rating;
+        }
+
+        if (b.remaining !== a.remaining) {
+            return b.remaining - a.remaining; 
+        }
+
+        return b.discount - a.discount; 
+    });
 
     return (
         <>
-            <HeaderSection title="trendy item" />
-
+            <HeaderSection title="Trendy Item" />
             <div className="box-trendy-item px">
-                {isLoading && Array.from({ length: 10 }).map((_, index) => (
-                    <CardLoading key={index} />
-                ))}
-                {data?.data?.map((product) => (
+                {sortedData?.map((product) => (
                     <Card key={product?.id} product={product} />
                 ))}
             </div>
         </>
-    )
+    );
 }

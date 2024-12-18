@@ -38,9 +38,15 @@ export default function Card({ product }) {
                 </button>
             </div>
 
+            {product.discount > 0 &&
+                <div className="discount">
+                    <span>{`${product.discount}%`}</span>
+                </div>
+            }
+
             <Link className="box-image-card" to={`/${product.id}/${product.name}`}>
                 <div className="image-full-screen">
-                    {product.colors[selectedColorI]?.image ? (
+                    {product?.colors[selectedColorI]?.image ? (
                         <>
                             <img src={product.colors[selectedColorI]?.image[0]} alt={product.name} className="image-card" />
                             <img src={product.colors[selectedColorI]?.image[1]} alt={product.name} className="hover-image-card" />
@@ -57,7 +63,21 @@ export default function Card({ product }) {
 
             <Link className="box-content-card" to={`/${product.id}/${product.name}`}>
                 <h3>{product?.name}</h3>
-                <h4>${product?.price}</h4>
+                {
+                    product.discount > 0 ?
+                        <div className="box-discount">
+                            <h4 className="price-discount">
+                                <del>${product?.price.toFixed(2)}</del>
+                            </h4>
+                            <h4>
+                                ${product?.price.toFixed(2) - (product.price * product.discount / 100)}
+                            </h4>
+                        </div>
+                        :
+                        <div>
+                            <h4>${product?.price.toFixed(2)}</h4>
+                        </div>
+                }
             </Link>
 
             <div className="box-color">
