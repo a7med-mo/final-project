@@ -13,7 +13,7 @@ export default function CountryDropdown({ name }) {
     };
 
     return (
-        <div style={{ width: "80%", marginBlock: "1rem .7rem", fontSize: ".8rem" }}>
+        <div className="form-control">
             <Select
                 options={options}
                 value={field.value}

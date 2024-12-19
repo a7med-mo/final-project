@@ -7,6 +7,7 @@ export default function Header() {
     const [isFixed, setIsFixed] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,9 +34,9 @@ export default function Header() {
         
         <header className={`header px ${isFixed ? 'fixed' : ''} ${isHidden ? 'hidden' : ''}`}>
             <Logo />
-            <NavBar />
+            <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             </header>
-            <HeaderMobile />
+            <HeaderMobile isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         </>
     );
 }

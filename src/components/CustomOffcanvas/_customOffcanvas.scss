@@ -129,7 +129,7 @@
                     height: 4.8rem;
                     overflow: hidden;
                     border-radius: .5rem;
-                    background-color: aqua;
+                    background-color: $TextColor5;
 
                     img {
                         width: 100%;
@@ -200,8 +200,8 @@
                 .card {
 
                     a.box-image {
-                        width: 28%;
-                        height: 7.5rem;
+                        width: 25%;
+                        height: 8.75rem;
                     }
 
                     a.box-content {
@@ -211,6 +211,12 @@
 
                         h4 {
                             font-size: 1.2rem;
+                        }
+
+                        .box-discount {
+                            .price-discount {
+                                font-size: 1.2rem !important;
+                            }
                         }
                     }
                 }

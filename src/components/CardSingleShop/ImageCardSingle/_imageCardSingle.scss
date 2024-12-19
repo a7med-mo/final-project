@@ -1,6 +1,6 @@
 .box-image-card-single {
-    width: 47.5%;
-    height: 75vh;
+    width: 49.5%;
+    height: 73vh;
     overflow: hidden; 
     
     @include flex(row, center, flex-start, 0.5rem);
@@ -32,7 +32,7 @@
     }
 
     .image-full-screen {
-        width: 80%;
+        width: 83%;
         height: 75vh;
 
         img {

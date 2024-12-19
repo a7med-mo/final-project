@@ -79,3 +79,10 @@
         left: 110%;
     }
 }
+
+
+@media (max-width: 767px) {
+    .card-loading {
+        width: calc((100% / 2) - 1rem);
+    }
+}

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { CiSearch, CiHeart, CiShoppingCart, CiLogin } from "react-icons/ci";
 import { PiUserCircleLight } from "react-icons/pi";
 import { AiOutlineProduct } from "react-icons/ai";
@@ -9,14 +11,12 @@ import CustomOffcanvas from "../../CustomOffcanvas/CustomOffcanvas";
 import { useQuery } from "@tanstack/react-query";
 import { axiosConfig } from "../../../utils/axiosConfig";
 import { supabase } from "../../../utils/supabaseClient";
-import User from "../../User/User";
 
-export default function NavBar() {
+export default function NavBar({ setIsLoggedIn, isLoggedIn }) {
     const cart = useContext(CartContext);
     const { wishlist } = useContext(WishlistContext) || { wishlist: [] };
     const [show, setShow] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [showUser, setShowUser] = useState(false);
+
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -40,31 +40,6 @@ export default function NavBar() {
                 url: `/products`,
             }),
     });
-
-    const handleUser = () => {
-        setShowUser(!showUser);
-    };
-    
-    const handleLogout = async () => {
-        try {
-            await supabase.auth.signOut();
-
-            localStorage.removeItem('sb-uioxugtlgudsoxwvfnsb-auth-token');
-
-            const cookies = document.cookie.split("; ");
-            for (let c of cookies) {
-                const d = c.indexOf("=");
-                const cookieName = d > -1 ? c.substr(0, d) : c;
-                document.cookie = `${cookieName}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
-            }
-
-            setIsLoggedIn(false);
-            setShowUser(false);
-        } catch (error) {
-            console.error("Error during logout:", error);
-        }
-    };
-
 
     return (
         <nav className="navbar">
@@ -93,11 +68,10 @@ export default function NavBar() {
                     </Link>
                 </li>
                 {isLoggedIn ? (
-                    <div onClick={handleUser} title="User">
+                    <div title="User">
                         <li className="none">
                             <PiUserCircleLight className="icon" />
                         </li>
-                        <User showUser={showUser} handleLogout={handleLogout} />
                     </div>
                 ) : (
                     <li className="none">

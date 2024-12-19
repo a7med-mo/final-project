@@ -36,7 +36,44 @@
                 }
             }
         }
+    }
+}
 
+@media (max-width: 767px) {
+    .table-details {
+        width: 95%;
 
+        tr {
+            border-bottom: 1px solid #0000002a;
+
+            td {
+                padding: 1rem;
+                color: $TextColor2;
+                font-size: 1.3rem;
+                text-transform: capitalize;
+                border: 1px solid #0000002a;
+
+                &.td-title {
+                    font-weight: 600;
+                    color: $TextColor1;
+                    background: $TextColor5;
+                    width: 20%;
+                    text-align: start;
+                }
+
+                &.td-price {
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+
+                    .price-discount {
+                        color: #ff3131d7;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
     }
 }

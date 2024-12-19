@@ -40,7 +40,7 @@ export default function RegisterForm() {
 
     const onSubmit = async (values, { setSubmitting, resetForm }) => {
         try {
-            const { data: existingUser, error: fetchError } = await supabase
+            const { data: existingUser } = await supabase
                 .from("users")
                 .select("*")
                 .eq("email", values.email)
@@ -54,12 +54,14 @@ export default function RegisterForm() {
 
             const hashedPassword = await bcrypt.hash(values.password, 10);
 
-            const { error: insertError } = await supabase.from("users").insert([{
-                first_name: values.firstName,
-                last_name: values.lastName,
-                email: values.email,
-                password: hashedPassword,
-            }]);
+            const { error: insertError } = await supabase.from("users").insert([
+                {
+                    first_name: values.firstName,
+                    last_name: values.lastName,
+                    email: values.email,
+                    password: hashedPassword,
+                },
+            ]);
 
             if (insertError) {
                 ShowToastError({ message: "Registration failed. Please try again." });
@@ -67,20 +69,13 @@ export default function RegisterForm() {
                 return;
             }
 
-            const { error: emailError } = await supabase.auth.api
-                .sendMagicLinkEmail(values.email);
+            ShowToastSuccess({
+                message: "Registration successful! Please log in.",
+            });
 
-            if (emailError) {
-                ShowToastError({ message: "Error sending verification link. Please try again." });
-                setSubmitting(false);
-                return;
-            }
-
-            ShowToastSuccess({ message: "Registration successful! Please check your email to verify your account." });
             resetForm();
             navigate("/login");
-        } catch (error) {
-            console.error("Registration error:", error);
+        } catch {
             ShowToastError({ message: "An unexpected error occurred. Please try again." });
         } finally {
             setSubmitting(false);
@@ -97,7 +92,6 @@ export default function RegisterForm() {
                 {({ errors, touched, isSubmitting }) => (
                     <Form>
                         <h2>Register</h2>
-
                         <WrapperField
                             name="firstName"
                             title="First Name"
@@ -131,7 +125,6 @@ export default function RegisterForm() {
                             error={errors.confirmPassword}
                             touched={touched.confirmPassword}
                         />
-
                         <button
                             className={`btn ${isSubmitting ? "disabled" : ""}`}
                             type="submit"
@@ -139,7 +132,6 @@ export default function RegisterForm() {
                         >
                             {isSubmitting ? "Registering..." : "Register"}
                         </button>
-
                         <p>
                             Already have an account? <Link to="/login">Log In</Link>
                         </p>

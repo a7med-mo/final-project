@@ -1,0 +1,57 @@
+.error-empty {
+    width: 100%;
+    @include flex(column, center, center, 1.2rem);
+    text-align: center;
+    margin-block: 8rem;
+
+    .icon {
+        font-size: 5.5rem;
+        color: $TextColor1;
+    }
+
+    h2 {
+        font-size: 1.05rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $TextColor1;
+    }
+
+    a {
+        font-size: .55rem;
+    }
+
+    p {
+        width: 40%;
+        font-size: .65rem;
+        line-height: 1rem;
+        font-weight: 400;
+        color: $TextColor1;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .error-empty {
+        margin-block: 8rem;
+
+        .icon {
+            font-size: 7rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        a {
+            font-size: 1rem;
+            padding: 1rem 2rem;
+        }
+
+        p {
+            width: 80%;
+            line-height: 1.7rem;
+            font-size: 1rem;
+        }
+    }
+}

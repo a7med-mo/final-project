@@ -1,14 +1,14 @@
-.international-shipping{
+.international-shipping {
 
     margin-block: 1rem 1.5rem;
 
-    h2{
+    h2 {
         font-size: .8rem;
         font-weight: 600;
         color: #000;
     }
 
-    .box-international-shipping{
+    .box-international-shipping {
         @include flex(row, space-between, center, 1rem);
         width: 80%;
         margin-top: .5rem;
@@ -18,16 +18,39 @@
         border: 1px solid $blue;
         background: #e8f3fb;
 
-        span{
+        span {
             font-size: .7rem;
             font-weight: 500;
             color: #000;
         }
 
-        .free{
+        .free {
             text-transform: uppercase;
             font-size: .65rem;
         }
     }
 
+}
+
+@media (max-width: 767px) {
+    .international-shipping {
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        .box-international-shipping {
+            @include flex(row, space-between, center, 1rem);
+            width: 97%;
+            padding-block: .8rem;
+
+            span {
+                font-size: 1.45rem;
+            }
+
+            .free {
+                font-size: 1.35rem;
+            }
+        }
+    }
 }

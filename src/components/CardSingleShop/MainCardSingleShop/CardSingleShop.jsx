@@ -14,7 +14,7 @@ export default function CardSingleShop({ product }) {
     const [productItem, setProductItem] = useState({
         id: product.id,
         name: product.name,
-        price: product.price,
+        price: product.discount ? product.price * (1 - product.discount / 100) : product.price,
         stock: product.stock,
         colors: product.colors,
         sizes: product.sizes,
@@ -24,14 +24,15 @@ export default function CardSingleShop({ product }) {
         image: product.colors[0]?.image?.[0] || "default-image.jpg",
         size: product.sizes?.[0] || "Default Size",
     });
-    
+
+
 
     return (
         <div className="card-single-shop px">
             <ImageCardSingle
                 images={product.colors[selectedColorI]?.image || ["default-image.jpg"]}
             />
-            
+
             <ContentCardSingle
                 product={product}
                 selectedColorI={selectedColorI}

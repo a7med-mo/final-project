@@ -185,12 +185,32 @@
 
         .section-post-left {
             width: 100%;
-            height: 40vh;
+            height: 35vh;
+
+            .post-content {
+                h3 {
+                    font-size: 2.6rem !important;
+                }
+
+                h4 {
+                    font-size: 2.2rem !important;
+                }
+            }
         }
 
         .section-post-right {
             width: 100%;
             height: 40vh;
+
+            .post-content {
+                h3 {
+                    font-size: 2.2rem !important;
+                }
+
+                h4 {
+                    font-size: 1.6rem !important;
+                }
+            }
         }
     }
 }

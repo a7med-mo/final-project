@@ -4,6 +4,8 @@ import { axiosConfig } from "../../utils/axiosConfig";
 import Card from "../Card/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/autoplay";
+
 
 export default function YouMayAlsoLike({ productId }) {
     const { data, isLoading, isError, error } = useQuery(
@@ -42,18 +44,15 @@ export default function YouMayAlsoLike({ productId }) {
             <div className="box-You-May-Also-Like">
                 <Swiper
                     spaceBetween={10}
-                    slidesPerView={5}
+                    slidesPerView={2} 
                     loop={true}
                     autoplay={{ delay: 3000 }}
                     breakpoints={{
+                        768: {
+                            slidesPerView: 2,
+                        },
                         1024: {
                             slidesPerView: 5,
-                        },
-                        768: {
-                            slidesPerView: 3,
-                        },
-                        480: {
-                            slidesPerView: 1,
                         },
                     }}
                 >
@@ -63,6 +62,7 @@ export default function YouMayAlsoLike({ productId }) {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+
             </div>
         </>
     );

@@ -61,6 +61,8 @@ export default function CardShopCart({ index, item, deleteItem, editItem, produc
                                         item={item}
                                         handleOpen={handleOpen}
                                         editItem={editItem}
+                                        count={count}
+                                        setCount={setCount}
                                         className="edit-active"
                                     /> : ''}
                                 <span className="icon edit">

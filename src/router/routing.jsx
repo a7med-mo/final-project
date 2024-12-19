@@ -12,9 +12,7 @@ import LogIn from "../pages/login/LogIn";
 import Register from "../pages/register/register";
 
 
-
 export const routes = createBrowserRouter([
-
     {
         path: "/",
         element: <Layout />,

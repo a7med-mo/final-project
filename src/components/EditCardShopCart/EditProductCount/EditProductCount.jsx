@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
-import { useState } from "react";
 
 
-export default function EditProductCount({ item, editItem }) {
 
-    const [count, setCount] = useState(item?.quantity);
+export default function EditProductCount({ item, editItem, count, setCount }) {
+
+  
 
     const handleCount = (action) => {
         if (action === "plus") {

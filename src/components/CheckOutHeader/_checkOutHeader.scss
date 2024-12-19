@@ -26,3 +26,34 @@
         color: $blue;
     }
 }
+
+@media (max-width: 767px) {
+    .check-out-header {
+        @include flex(row, space-between, center, 1rem);
+        width: 100%;
+        height: 7.5vh;
+        border-bottom: 1px solid #0000001a;
+        padding-inline: 4rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: #fff;
+
+        .logo {
+            h2 {
+                color: $TextColor1;
+                font-size: 1.5rem;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+
+        }
+
+        svg {
+            font-size: 1.8rem;
+            color: $blue;
+        }
+    }
+}

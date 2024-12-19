@@ -1,0 +1,15 @@
+
+
+.form-control{
+    width: 80%;
+    margin-block: 1rem .7rem;
+    font-size: .8rem
+}
+
+@media (max-width: 767px) {
+    .form-control{
+        width: 95%;
+        font-size: 1.1rem;
+        margin-block: 1.2rem 1rem;
+    }
+}

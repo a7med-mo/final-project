@@ -55,7 +55,7 @@ export default function ContentCardSingle({ product, selectedColorI, setSelected
                         </div>
                         :
                         <div>
-                            <h4>${product?.price.toFixed(2)}</h4>
+                            <h3>${product?.price.toFixed(2)}</h3>
                         </div>
                 }
 
@@ -75,11 +75,13 @@ export default function ContentCardSingle({ product, selectedColorI, setSelected
                     ))}
                 </ul>
 
-                <ul>
+                <ul style={product?.sizes?.length > 0 ? { display: "" } : { display: "none" }}>
                     <h4>size: {product?.sizes[isSize]}</h4>
                     {product?.sizes?.map((size, i) => (
                         <li key={i} className={`size ${isSize === i ? "active" : ""}`} onClick={() => iSize(i)}>
-                            <span >{size}</span>
+                            <span >
+                                {size}
+                            </span>
                         </li>
                     ))}
                 </ul>

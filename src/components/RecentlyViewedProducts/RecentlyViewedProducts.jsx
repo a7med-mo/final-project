@@ -43,7 +43,7 @@ export default function RecentlyViewedProducts({ productId }) {
             <div className="box-Recently-Viewed-Products">
                 <Swiper
                     spaceBetween={10}
-                    slidesPerView={5}
+                    slidesPerView={2}
                     loop={true}
                     autoplay={{ delay: 3000 }}
                     breakpoints={{

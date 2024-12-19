@@ -142,3 +142,84 @@
         }
     }
 }
+
+
+@media (max-width: 767px) {
+    .section-enter-user-data {
+        width: 100%;
+        margin-inline: 0;
+        margin-top: 6rem !important;
+        margin-inline: 1rem !important;
+
+        .wrapperField-input {
+            width: 97%;
+
+            input {
+                width: 100%;
+                font-size: 1rem;
+
+                &::placeholder {
+                    font-size: 1.1rem !important;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .box-user-name,
+        .box-user-address-city {
+            @include flex(row, space-between, flex-start, 0);
+            width: 97%;
+
+            .box-user-name-title {
+                width: 100%;
+                margin-bottom: .4rem;
+                @include flex(row, space-between, center, 0);
+
+                h2 {
+                    font-size: 1.2rem;
+                    color: #000;
+                    font-weight: 600;
+                    margin-bottom: .3rem;
+                }
+
+                a {
+                    font-size: 1rem;
+                    color: $blue;
+                    font-weight: 400;
+                    text-decoration: underline;
+                }
+            }
+
+            .wrapperField-input {
+                width: 49%;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .section-checkBox {
+            label {
+                font-size: 1rem;
+            }
+
+            .checkbox {
+                width: 1.1rem;
+                height: 1.1rem;
+                border-radius: .15rem;
+
+                svg {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .btn-submit-checkout-form {
+            width: 97%;
+            font-size: 1.3rem !important;
+        }
+
+    }
+}

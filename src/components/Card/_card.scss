@@ -6,7 +6,7 @@
     cursor: pointer;
     transition: .5s;
 
-    .discount{
+    .discount {
         font-size: .65rem;
         color: #fff;
         background: $mainColor;
@@ -36,8 +36,8 @@
             font-size: 1.4rem;
             color: $TextColor3;
             transition: 0.5s;
-            
-            .like{
+
+            .like {
                 color: $mainColor;
             }
 
@@ -68,7 +68,7 @@
             position: absolute;
         }
 
-        .hover-image-card{
+        .hover-image-card {
             opacity: 0;
             height: 100%;
             visibility: hidden;
@@ -92,10 +92,10 @@
             transition: 0.5s;
         }
 
-        .box-discount{
+        .box-discount {
             @include flex(row, flex-start, center, 0.5rem);
 
-            .price-discount{
+            .price-discount {
                 color: #ff1111d7;
                 text-transform: capitalize;
                 font-size: .75rem;
@@ -248,6 +248,11 @@
             }
         }
 
+        .discount {
+            font-size: 1.1rem;
+            padding: .3rem .6em;
+        }
+
         .box-content-card {
 
             h3 {
@@ -258,6 +263,12 @@
             h4 {
                 font-size: 1.6rem;
                 font-weight: 500;
+            }
+
+            .box-discount {
+                .price-discount {
+                    font-size: 1.5rem;
+                }
             }
         }
 

@@ -26,3 +26,16 @@
     color: $TextColor1;
     margin-block: 1.25rem .75rem;
 }
+
+@media (max-width: 767px) {
+    .title-Recently-Viewed-Products {
+        font-size: 2.3rem !important;
+        margin-block: 3rem 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-Recently-Viewed-Products {
+        font-size: 1.5rem;
+    }
+}

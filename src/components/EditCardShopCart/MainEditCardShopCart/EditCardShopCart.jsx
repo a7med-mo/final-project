@@ -5,7 +5,7 @@ import EditProductColor from "../EditProductColor/EditProductColor";
 import EditProductSize from "../EditProductSize/EditProductSize";
 import EditProductCount from "../EditProductCount/EditProductCount";
 
-export default function EditCardShopCart({ item, editItem, handleOpen }) {
+export default function EditCardShopCart({ item, editItem, handleOpen, count, setCount }) {
 
     return (
         <div className="edit-popap">
@@ -26,7 +26,7 @@ export default function EditCardShopCart({ item, editItem, handleOpen }) {
 
                 <EditProductColor item={item} />
                 <EditProductSize item={item} />
-                <EditProductCount item={item} editItem={editItem} />
+                <EditProductCount item={item} editItem={editItem} count={count} setCount={setCount} />
             </div>
         </div>
     );
