@@ -43,7 +43,21 @@ export default function ContentCardSingle({ product, selectedColorI, setSelected
         <>
             <div className="content-card-single">
                 <h2>{product?.name}</h2>
-                <h3>${product?.price}</h3>
+                {
+                    product.discount > 0 ?
+                        <div className="box-discount">
+                            <h3 className="price-discount">
+                                <del>${product?.price.toFixed(2)}</del>
+                            </h3>
+                            <h3>
+                                ${product?.price.toFixed(2) - (product.price * product.discount / 100)}
+                            </h3>
+                        </div>
+                        :
+                        <div>
+                            <h4>${product?.price.toFixed(2)}</h4>
+                        </div>
+                }
 
                 <div className="reviews">
                     <StarRating rating={product?.rating} />
@@ -71,7 +85,7 @@ export default function ContentCardSingle({ product, selectedColorI, setSelected
                 </ul>
 
                 <BtnsCardSingleShop product={product} productItem={productItem} setProductItem={setProductItem} />
-            </div>
+            </div >
 
         </>
     )

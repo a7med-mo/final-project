@@ -19,7 +19,7 @@
 
     .collection-cards {
         width: 100%;
-        @include flex(row, center, center, 1rem);
+        @include flex(row, center, flex-start, 1rem);
 
         .box-card {
             width: calc((100% / 3) - 1rem);

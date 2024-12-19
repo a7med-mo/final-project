@@ -1,9 +1,28 @@
 import SliderDiscount from "../SliderDiscount/SliderDiscount";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+import { useQuery } from "@tanstack/react-query";
+import { axiosConfig } from "../../../utils/axiosConfig";
 
 
 export default function BannerDiscounts() {
+
+    const { data } = useQuery(
+        {
+            queryKey: ['bannerDiscounts'],
+            queryFn: () => axiosConfig({
+                method: 'get',
+                url: `/banner_discount?`
+            })
+        }
+    )
+
+
+    
+    console.log(data?.data);
+    
+
+
     return (
         <>
             <div className="banner-discounts">
@@ -24,16 +43,11 @@ export default function BannerDiscounts() {
                         modules={[Autoplay, Pagination]}
                     >
 
-                        <SwiperSlide>
-                            <SliderDiscount />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <SliderDiscount />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <SliderDiscount />
-                        </SwiperSlide>
-
+                        {data?.data?.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <SliderDiscount item={item} />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
 
                 </div>
