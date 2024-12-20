@@ -1,11 +1,11 @@
 [
     {
-        "name": "Petite Melrose",
-        "description": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a stylish...",
-        "price": 120,
+        "name": "Red Cool",
+        "description": "Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.",
+        "price": 80,
         "category": "Fashion",
-        "brand": "BrandWS",
-        "type": "men",
+        "brand": "BrandSS",
+        "type": "girls",
         "stock": 60,
         "rating": 5.00,
         "reviews": [
@@ -18,21 +18,21 @@
             }
         ],
         "images": [
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-soldier_720x.png?v=1622017636",
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-rolled-up_720x.png?v=1622017644",
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-three-quarter_720x.png?v=1622017651",
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-back_720x.png?v=1622017660"
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_1_2_720x.jpg?v=1621820537",
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_2_2_720x.jpg?v=1621820537",
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_3_2_720x.jpg?v=1621820537",
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_4_2_720x.jpg?v=1621820537"
         ],
         "colors": [
             {
                 "image": [
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-soldier_720x.png?v=1622017636",
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-rolled-up_720x.png?v=1622017644",
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-three-quarter_720x.png?v=1622017651",
-            "https://elessi2.myshopify.com/cdn/shop/products/a17326161c1p3-navitimer-automatic-41-back_720x.png?v=1622017660"
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_1_2_720x.jpg?v=1621820537",
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_2_2_720x.jpg?v=1621820537",
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_3_2_720x.jpg?v=1621820537",
+            "https://elessi2.myshopify.com/cdn/shop/products/7219312022_2_4_2_720x.jpg?v=1621820537"
         ],
-                "hexCode": "#4d627d",
-                "colorName": "blue"
+                "hexCode": "#891119",
+                "colorName": "red"
             }
         ],
         "sizes": [],

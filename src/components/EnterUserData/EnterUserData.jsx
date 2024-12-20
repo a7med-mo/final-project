@@ -4,13 +4,15 @@ import WrapperField from "../WrapperField/WrapperField";
 import CountryDropdown from "../CountryDropdown/CountryDropdown";
 import Payment from "../Payment/Payment";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 import InternationalShipping from "../InternationalShipping/InternationalShipping";
+import { supabase } from "../../utils/supabaseClient";
 
 export default function CheckoutForm() {
 
     const [checked, setChecked] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const initialValues = {
         emailORphone: "",
@@ -61,6 +63,16 @@ export default function CheckoutForm() {
         setChecked((prev) => !prev);
     };
 
+    useEffect(() => {
+        const { subscription } = supabase.auth.onAuthStateChange((event, session) => {
+            setIsLoggedIn(!!session);
+        });
+
+        return () => {
+            if (subscription) subscription.unsubscribe();
+        };
+    }, []);
+
     return (
         <div className="section-enter-user-data">
 
@@ -74,7 +86,7 @@ export default function CheckoutForm() {
                         <div className="box-user-name">
                             <div className="box-user-name-title">
                                 <h2>Contact</h2>
-                                <Link to="">Log in</Link>
+                                {!isLoggedIn && <Link to="/login">Login</Link>}
                             </div>
                             <WrapperField
                                 name="firstName"
